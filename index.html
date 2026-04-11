@@ -3,701 +3,324 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Reformer & Mat Pilates • Klinik Pilates • Manuel Terapi • Birebir & Düet Dersler" />
-  <title>MyFizyo | Pilates Stüdyosu</title>
-  <meta property="og:title" content="MyFizyo | Özel Sağlık Meslek Hizmet Birimi & Pilates Stüdyosu" />
-  <meta property="og:description" content="Reformer & Mat Pilates • Manuel Terapi • Klinik Pilates • Birebir & Düet Dersler" />
+  <meta name="description" content="MyFizyo | Fizyoterapi ve Pilates | Özel Sağlık Meslek Hizmet Birimi — Reformer &amp; Mat Pilates, Manuel Terapi, Klinik Pilates. İstanbul Kartal." />
+  <title>MyFizyo | Fizyoterapi ve Pilates | Özel Sağlık Meslek Hizmet Birimi</title>
+  <meta property="og:title" content="MyFizyo | Fizyoterapi ve Pilates | Özel Sağlık Meslek Hizmet Birimi" />
   <meta property="og:type" content="website" />
   <link rel="icon" href="/favicon.ico" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
-
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
   <style>
-    :root {
-      --warm-white: #faf8f4;
-      --ink: #1a1714;
-      --muted: #8a7f74;
-      --gold: #b8955a;
-      --gold-light: #d4b07a;
-      --gold-pale: rgba(184,149,90,0.10);
-      --gold-border: rgba(184,149,90,0.28);
-      --divider: rgba(26,23,20,0.08);
-      --card-bg: #ffffff;
-      --radius-sm: 6px;
-      --radius: 14px;
-      --radius-lg: 22px;
-      --max: 1160px;
-      --serif: 'Cormorant Garamond', Georgia, serif;
-      --sans: 'DM Sans', sans-serif;
+    :root{--warm-white:#faf8f4;--ink:#1a1714;--muted:#8a7f74;--gold:#b8955a;--gold-light:#d4b07a;--gold-pale:rgba(184,149,90,.10);--gold-border:rgba(184,149,90,.28);--divider:rgba(26,23,20,.08);--card-bg:#fff;--radius-sm:6px;--radius:14px;--radius-lg:22px;--max:1160px;--serif:'Cormorant Garamond',Georgia,serif;--sans:'DM Sans',sans-serif}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:var(--sans);background:var(--warm-white);color:var(--ink);font-size:15px;line-height:1.65;overflow-x:hidden}
+    body::before{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.025'/%3E%3C/svg%3E");pointer-events:none;z-index:9999}
+    .container{max-width:var(--max);margin:0 auto;padding:0 48px}
+    @media(max-width:768px){.container{padding:0 20px}}
+    .reveal{opacity:0;transform:translateY(32px);transition:opacity .75s cubic-bezier(.22,1,.36,1),transform .75s cubic-bezier(.22,1,.36,1)}
+    .reveal.visible{opacity:1;transform:translateY(0)}
+    .reveal-delay-1{transition-delay:.1s}
+    .reveal-delay-2{transition-delay:.2s}
+    .reveal-delay-3{transition-delay:.3s}
+    @keyframes fadeUp{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:translateY(0)}}
+    @keyframes fadeIn{from{opacity:0}to{opacity:1}}
+    @keyframes shimmer{0%{left:-80%}100%{left:130%}}
+    @keyframes floatY{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+    @keyframes pulseGold{0%,100%{box-shadow:0 0 0 0 rgba(184,149,90,.35)}50%{box-shadow:0 0 0 10px rgba(184,149,90,0)}}
+    @keyframes rotateSpin{from{transform:rotate(45deg)}to{transform:rotate(405deg)}}
+    @keyframes slideTrack{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+    @keyframes scaleIn{from{opacity:0;transform:scale(.97)}to{opacity:1;transform:scale(1)}}
+    @keyframes breathe{0%,100%{opacity:.6;transform:scale(1)}50%{opacity:1;transform:scale(1.05)}}
+    .hero-eyebrow{animation:fadeIn 1.1s ease both}
+    .hero-left{animation:fadeUp 1s cubic-bezier(.22,1,.36,1) .12s both}
+    .hero-right{animation:fadeUp 1s cubic-bezier(.22,1,.36,1) .3s both}
+    .logo-icon{animation:pulseGold 3.5s ease-in-out infinite}
+    .media-card img{animation:floatY 8s ease-in-out infinite}
+
+    /* SPLASH */
+    #splash{position:fixed;inset:0;z-index:99998;background:#faf8f4;display:flex;flex-direction:column;align-items:center;justify-content:center;pointer-events:none}
+    #splash.hide{animation:splashOut .75s cubic-bezier(.22,1,.36,1) .15s both}
+    @keyframes splashOut{0%{opacity:1;transform:scale(1)}100%{opacity:0;transform:scale(1.03)}}
+    .spl-wrap{display:flex;flex-direction:column;align-items:center;gap:20px;animation:splashIn .9s cubic-bezier(.22,1,.36,1) .1s both}
+    @keyframes splashIn{from{opacity:0;transform:translateY(22px) scale(.95)}to{opacity:1;transform:translateY(0) scale(1)}}
+    .spl-icon{width:96px;height:96px;border:1.5px solid var(--gold);border-radius:50%;display:flex;align-items:center;justify-content:center;animation:splPulse 2.2s ease-in-out infinite}
+    @keyframes splPulse{0%,100%{box-shadow:0 0 0 0 rgba(184,149,90,.4)}50%{box-shadow:0 0 0 16px rgba(184,149,90,0)}}
+    .spl-icon svg{width:44px;height:44px}
+    .spl-text{display:flex;flex-direction:column;align-items:center;gap:6px}
+    .spl-name{font-family:var(--serif);font-size:54px;font-weight:300;letter-spacing:4px;color:var(--ink);line-height:1}
+    .spl-name .sg{color:var(--gold);font-weight:400}
+    .spl-sub{font-family:var(--sans);font-size:10px;font-weight:500;letter-spacing:5px;text-transform:uppercase;color:var(--muted);opacity:.75}
+    .spl-line{height:1px;background:var(--gold);opacity:.35;animation:splLine .9s cubic-bezier(.22,1,.36,1) .55s both}
+    @keyframes splLine{from{width:0}to{width:160px}}
+    .spl-bar{width:48px;height:1px;background:var(--divider);position:relative;overflow:hidden;animation:splashIn .9s cubic-bezier(.22,1,.36,1) .3s both}
+    .spl-bar::after{content:'';position:absolute;inset:0;background:var(--gold);animation:splBar 1.6s cubic-bezier(.22,1,.36,1) .45s both}
+    @keyframes splBar{from{transform:translateX(-100%)}to{transform:translateX(0)}}
+
+    /* HEADER */
+    .topbar{position:sticky;top:0;z-index:1000;background:rgba(250,248,244,.96);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);border-bottom:1px solid var(--divider);transition:box-shadow .3s}
+    .topbar.scrolled{box-shadow:0 4px 32px rgba(26,23,20,.08)}
+    .topbar-inner{display:flex;align-items:center;justify-content:space-between;padding:12px 48px;max-width:var(--max);margin:0 auto;gap:16px}
+
+    /* LOGO */
+    .brand{text-decoration:none;display:flex;align-items:center;gap:14px;flex-shrink:0}
+    .logo-icon{width:46px;height:46px;border:1.5px solid var(--gold);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:transform .45s cubic-bezier(.22,1,.36,1),box-shadow .45s;position:relative}
+    .logo-icon::after{content:'';position:absolute;inset:-4px;border-radius:50%;border:1px solid rgba(184,149,90,.2);transition:inset .35s,opacity .35s;opacity:0}
+    .brand:hover .logo-icon{transform:rotate(18deg) scale(1.1);box-shadow:0 6px 24px rgba(184,149,90,.3)}
+    .brand:hover .logo-icon::after{inset:-8px;opacity:1}
+    .logo-icon svg{width:20px;height:20px}
+    .logo-tw{display:flex;flex-direction:column;gap:2px}
+    .logo-nm{font-family:var(--serif);font-size:28px;font-weight:300;letter-spacing:1px;color:var(--ink);transition:color .2s;line-height:1}
+    .logo-nm .lg{color:var(--gold);font-weight:400;letter-spacing:2px}
+    .brand:hover .logo-nm{color:var(--gold)}
+    .logo-tg{font-family:var(--sans);font-size:7.5px;font-weight:500;letter-spacing:3.5px;text-transform:uppercase;color:var(--muted);opacity:.75;line-height:1}
+
+    /* NAV */
+    nav{display:flex;gap:2px;align-items:center}
+    nav a{color:var(--muted);font-size:13.5px;padding:7px 12px;border-radius:999px;text-decoration:none;transition:color .2s,background .2s;position:relative}
+    nav a:hover{color:var(--ink);background:var(--gold-pale)}
+    nav a::after{content:'';position:absolute;bottom:4px;left:12px;right:12px;height:1px;background:var(--gold);transform:scaleX(0);transition:transform .25s cubic-bezier(.22,1,.36,1);transform-origin:left}
+    nav a:hover::after{transform:scaleX(1)}
+
+    /* BUTTONS */
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:11px 22px;border-radius:999px;font-family:var(--sans);font-size:13.5px;font-weight:500;text-decoration:none;cursor:pointer;border:none;transition:all .28s cubic-bezier(.22,1,.36,1);white-space:nowrap}
+    .btn-gold{background:var(--gold);color:#fff;box-shadow:0 4px 20px rgba(184,149,90,.32)}
+    .btn-gold:hover{background:var(--gold-light);box-shadow:0 8px 36px rgba(184,149,90,.48);transform:translateY(-2px)}
+    .btn-outline{background:transparent;color:var(--ink);border:1px solid var(--divider)}
+    .btn-outline:hover{border-color:var(--gold-border);background:var(--gold-pale);transform:translateY(-1px)}
+    .btn-ghost{background:transparent;color:var(--gold);border:1.5px solid var(--gold-border)}
+    .btn-ghost:hover{background:var(--gold-pale);transform:translateY(-1px)}
+
+    /* MOBILE MENU */
+    .menu-toggle{display:none;width:44px;height:44px;background:var(--card-bg);border:1px solid var(--gold-border);border-radius:14px;align-items:center;justify-content:center;cursor:pointer;color:var(--ink);flex-shrink:0;z-index:1003;position:relative;box-shadow:0 2px 16px rgba(184,149,90,.15);transition:background .2s,border-color .2s}
+    .menu-toggle:hover{background:var(--gold-pale);border-color:var(--gold)}
+    .menu-toggle svg{display:block;transition:transform .3s}
+    #menuOverlay{position:fixed;inset:0;background:rgba(26,23,20,.5);opacity:0;visibility:hidden;transition:opacity .35s ease,visibility .35s ease;z-index:1001;backdrop-filter:blur(2px);-webkit-backdrop-filter:blur(2px)}
+    #menuOverlay.active{opacity:1;visibility:visible}
+    .desktop-wa{flex-shrink:0}
+    .nav-wa-mobile{display:none}
+    @media(max-width:900px){
+      .topbar-inner{padding:12px 20px}
+      .menu-toggle{display:flex}
+      .desktop-wa{display:none}
+      nav{position:fixed;top:0;left:-100%;width:280px;height:100dvh;background:var(--warm-white);flex-direction:column;align-items:flex-start;padding:80px 20px 40px;gap:4px;transition:left .35s cubic-bezier(.22,1,.36,1);z-index:1002;border-right:1px solid var(--divider);overflow-y:auto;box-shadow:none}
+      nav.active{left:0;box-shadow:8px 0 48px rgba(26,23,20,.16)}
+      nav a{font-size:16px;width:100%;padding:12px 16px;border-radius:14px;color:var(--ink)}
+      nav a:hover{background:var(--gold-pale);color:var(--gold)}
+      nav a::after{display:none}
+      .nav-wa-mobile{display:flex !important;margin-top:20px;width:100%;justify-content:center}
     }
 
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; }
+    /* HERO */
+    .hero{padding:72px 0 52px;position:relative}
+    .hero::before{content:'';position:absolute;left:0;right:0;top:0;height:1px;background:linear-gradient(90deg,transparent,rgba(184,149,90,.3),transparent);animation:lineShimmer 4s ease-in-out infinite}
+    @keyframes lineShimmer{0%,100%{opacity:0}50%{opacity:1}}
+    .hero-eyebrow{display:inline-flex;align-items:center;gap:12px;font-size:11px;font-weight:500;letter-spacing:2.5px;text-transform:uppercase;color:var(--gold);margin-bottom:28px}
+    .hero-eyebrow::before,.hero-eyebrow::after{content:'';display:block;width:32px;height:1px;background:var(--gold);opacity:.5}
+    .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:24px;align-items:stretch}
+    .hero-left{padding:52px;background:var(--card-bg);border-radius:var(--radius-lg);border:1px solid var(--divider);box-shadow:0 4px 48px rgba(26,23,20,.07);position:relative;overflow:hidden}
+    .hero-left::before{content:'';position:absolute;top:-80px;right:-80px;width:280px;height:280px;background:radial-gradient(circle,rgba(184,149,90,.12) 0%,transparent 70%);border-radius:50%;animation:breathe 6s ease-in-out infinite}
+    .hero-left::after{content:'';position:absolute;bottom:-60px;left:-60px;width:200px;height:200px;background:radial-gradient(circle,rgba(184,149,90,.08) 0%,transparent 70%);border-radius:50%;animation:breathe 8s ease-in-out infinite 2s}
+    h1{font-family:var(--serif);font-size:52px;font-weight:300;line-height:1.1;letter-spacing:-.5px;color:var(--ink);margin:0 0 20px;position:relative;z-index:1}
+    h1 em{font-style:italic;color:var(--gold)}
+    .hero-lead{color:var(--muted);font-size:15.5px;line-height:1.72;margin-bottom:28px;max-width:430px;position:relative;z-index:1}
+    .free-badge{display:inline-flex;align-items:center;gap:9px;background:var(--gold-pale);border:1px solid var(--gold-border);color:var(--gold);padding:10px 16px;border-radius:var(--radius-sm);font-size:13px;font-weight:500;margin-bottom:24px;position:relative;overflow:hidden;z-index:1}
+    .free-badge::after{content:'';position:absolute;top:0;left:-80%;width:50%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.55),transparent);animation:shimmer 3s ease-in-out infinite}
+    .hero-actions{display:flex;gap:12px;flex-wrap:wrap;position:relative;z-index:1}
+    .hero-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;margin-top:36px;background:var(--divider);border-radius:var(--radius-sm);overflow:hidden}
+    .stat{background:var(--warm-white);padding:18px;text-align:center;transition:background .25s}
+    .stat:hover{background:var(--gold-pale)}
+    .stat-num{font-family:var(--serif);font-size:26px;font-weight:400;color:var(--gold);display:block;line-height:1.2}
+    .stat-label{font-size:11px;color:var(--muted);letter-spacing:.4px;display:block;margin-top:4px}
+    .hero-right{display:flex;flex-direction:column;gap:16px}
+    .media-card{flex:1;border-radius:var(--radius-lg);overflow:hidden;position:relative;min-height:280px;background:linear-gradient(145deg,#e8ddd0,#d4c9b8);border:1px solid var(--divider)}
+    .media-card img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .7s}
+    .media-card:hover img{transform:scale(1.05);animation:none}
+    .media-caption{position:absolute;bottom:16px;left:16px;background:rgba(250,248,244,.95);backdrop-filter:blur(12px);padding:10px 16px;border-radius:999px;font-size:12px;font-weight:500;color:var(--ink);border:1px solid var(--divider)}
+    .info-card{background:var(--card-bg);border:1px solid var(--divider);border-radius:var(--radius-lg);padding:22px;box-shadow:0 2px 24px rgba(26,23,20,.05)}
+    .info-row{display:flex;align-items:center;gap:10px;font-size:13.5px;color:var(--muted)}
+    .info-dot{width:6px;height:6px;border-radius:50%;background:var(--gold);flex-shrink:0}
+    .pills-row{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}
+    .pill{font-size:11.5px;color:var(--muted);padding:6px 13px;border-radius:999px;border:1px solid var(--divider);background:var(--warm-white);transition:all .2s;cursor:default}
+    .pill:hover{border-color:var(--gold-border);color:var(--gold);background:var(--gold-pale)}
 
-    body {
-      font-family: var(--sans);
-      background: var(--warm-white);
-      color: var(--ink);
-      font-size: 15px;
-      line-height: 1.65;
-      overflow-x: hidden;
-    }
+    /* SECTIONS */
+    section{padding:64px 0}
+    .section-label{display:inline-flex;align-items:center;gap:10px;font-size:10.5px;font-weight:500;letter-spacing:2.5px;text-transform:uppercase;color:var(--gold);margin-bottom:12px}
+    .section-label::before{content:'';display:block;width:22px;height:1px;background:var(--gold);opacity:.6}
+    .section-title-group{margin-bottom:42px}
+    .section-title-group h2{font-family:var(--serif);font-size:38px;font-weight:300;letter-spacing:-.3px;color:var(--ink);line-height:1.14}
+    .section-title-group p{color:var(--muted);font-size:15px;margin-top:11px;max-width:520px}
+    .ornament{display:flex;align-items:center;gap:16px;margin:0 0 64px}
+    .ornament-line{flex:1;height:1px;background:var(--divider)}
+    .ornament-diamond{width:7px;height:7px;background:var(--gold);transform:rotate(45deg);opacity:.5;animation:rotateSpin 9s linear infinite}
 
-    /* ===== NOISE TEXTURE ===== */
-    body::before {
-      content: '';
-      position: fixed; inset: 0;
-      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.025'/%3E%3C/svg%3E");
-      pointer-events: none; z-index: 9999;
-    }
+    /* SERVICES */
+    .services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--divider);border:1px solid var(--divider);border-radius:var(--radius-lg);overflow:hidden}
+    .service-item{background:var(--card-bg);padding:36px 28px;transition:background .3s,border-color .3s;border-bottom:2px solid transparent;cursor:default}
+    .service-item:hover{background:var(--gold-pale);border-bottom-color:var(--gold)}
+    .service-item:hover .service-num{opacity:.6}
+    .service-num{font-family:var(--serif);font-size:46px;font-weight:300;color:var(--gold);opacity:.22;line-height:1;margin-bottom:14px;transition:opacity .3s}
+    .service-item h3{font-family:var(--serif);font-size:22px;font-weight:400;color:var(--ink);margin-bottom:9px}
+    .service-item p{color:var(--muted);font-size:14px;line-height:1.68}
+    .highlight-card{margin-top:20px;background:var(--card-bg);border:1px solid var(--divider);border-radius:var(--radius-lg);padding:38px;display:grid;grid-template-columns:1fr auto;gap:36px;align-items:center;box-shadow:0 2px 32px rgba(26,23,20,.05);transition:box-shadow .3s}
+    .highlight-card:hover{box-shadow:0 10px 56px rgba(26,23,20,.1)}
+    .highlight-card h3{font-family:var(--serif);font-size:28px;font-weight:300;margin-bottom:10px}
+    .benefits-list{list-style:none;display:flex;flex-direction:column;gap:11px;margin-top:16px}
+    .benefits-list li{display:flex;align-items:center;gap:13px;font-size:14px;color:var(--muted)}
+    .benefits-list li::before{content:'';width:18px;height:18px;border-radius:50%;background:var(--gold-pale);border:1px solid var(--gold-border);flex-shrink:0;background-image:url("data:image/svg+xml,%3Csvg width='10' height='8' viewBox='0 0 10 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 4L3.5 6.5L9 1' stroke='%23b8955a' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:center}
 
-    .container { max-width: var(--max); margin: 0 auto; padding: 0 48px; }
-    @media (max-width: 768px) { .container { padding: 0 20px; } }
+    /* PRICING */
+    .pricing-top{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .pricing-bottom{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:16px}
+    .price-card{background:var(--card-bg);border:1px solid var(--divider);border-radius:var(--radius-lg);padding:30px;position:relative;transition:box-shadow .3s,transform .3s}
+    .price-card:hover{box-shadow:0 18px 60px rgba(26,23,20,.12);transform:translateY(-5px)}
+    .price-card.featured{border-color:var(--gold);background:linear-gradient(160deg,#fffdf8,#fdf9ee)}
+    .price-card.special{border-color:rgba(184,149,90,.35);background:linear-gradient(160deg,#fffef8,#fef9ed)}
+    .price-tag{position:absolute;top:18px;right:18px;font-size:10px;font-weight:500;letter-spacing:1px;text-transform:uppercase;color:var(--gold);background:var(--gold-pale);border:1px solid var(--gold-border);padding:5px 10px;border-radius:999px}
+    .price-tag.new-tag{background:rgba(184,149,90,.15);color:#7a5218;border-color:rgba(184,149,90,.4)}
+    .price-card h3{font-family:var(--serif);font-size:21px;font-weight:400;color:var(--ink);margin-bottom:16px;padding-right:92px;line-height:1.3}
+    .price-amount{display:flex;align-items:baseline;gap:6px;margin-bottom:7px}
+    .price-amount .amount{font-family:var(--serif);font-size:34px;font-weight:300;color:var(--ink)}
+    .price-amount .per{font-size:13px;color:var(--muted)}
+    .price-promo{display:inline-flex;align-items:center;gap:6px;font-size:11px;font-weight:500;color:#7a5218;background:rgba(184,149,90,.15);border:1px solid rgba(184,149,90,.3);padding:5px 12px;border-radius:999px;margin-top:7px;margin-bottom:4px;position:relative;overflow:hidden}
+    .price-promo::after{content:'';position:absolute;top:0;left:-80%;width:50%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.6),transparent);animation:shimmer 3.5s ease-in-out infinite}
+    .price-divider{height:1px;background:var(--divider);margin:18px 0}
+    .price-features{list-style:none;display:flex;flex-direction:column;gap:9px}
+    .price-features li{font-size:13.5px;color:var(--muted);display:flex;align-items:center;gap:10px}
+    .price-features li::before{content:'\2014';color:var(--gold);opacity:.6;font-size:12px}
 
-    /* ===== SCROLL REVEAL ===== */
-    .reveal {
-      opacity: 0; transform: translateY(32px);
-      transition: opacity 0.75s cubic-bezier(0.22,1,0.36,1), transform 0.75s cubic-bezier(0.22,1,0.36,1);
-    }
-    .reveal.visible { opacity: 1; transform: translateY(0); }
-    .reveal-delay-1 { transition-delay: 0.1s; }
-    .reveal-delay-2 { transition-delay: 0.2s; }
-    .reveal-delay-3 { transition-delay: 0.3s; }
+    /* TRAINER */
+    .trainer-card{background:var(--card-bg);border:1px solid var(--divider);border-radius:var(--radius-lg);overflow:hidden;box-shadow:0 4px 36px rgba(26,23,20,.07)}
+    .trainer-header{padding:38px;background:linear-gradient(135deg,#f9f5ee,var(--warm-white));border-bottom:1px solid var(--divider);display:flex;align-items:center;gap:24px;flex-wrap:wrap}
+    .trainer-avatar{width:84px;height:84px;border-radius:50%;object-fit:cover;border:2px solid var(--gold-border);box-shadow:0 8px 36px rgba(184,149,90,.22);flex-shrink:0;transition:transform .45s,box-shadow .45s}
+    .trainer-avatar:hover{transform:scale(1.07);box-shadow:0 14px 44px rgba(184,149,90,.35)}
+    .trainer-name{font-family:var(--serif);font-size:30px;font-weight:300;color:var(--ink);margin-bottom:4px}
+    .trainer-role{font-size:13px;color:var(--muted);letter-spacing:.3px;margin-bottom:14px}
+    .trainer-links{display:flex;gap:8px;flex-wrap:wrap}
+    .link-pill{display:inline-flex;align-items:center;gap:7px;font-size:12.5px;font-weight:500;padding:9px 15px;border-radius:999px;border:1px solid var(--divider);background:var(--card-bg);color:var(--ink);text-decoration:none;transition:all .22s}
+    .link-pill:hover{border-color:var(--gold-border);background:var(--gold-pale);color:var(--gold);transform:translateY(-1px)}
+    .trainer-body{padding:28px 38px 38px;display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
+    .trainer-block h4{font-size:10.5px;font-weight:500;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:11px}
+    .trainer-block p{font-size:14px;color:var(--muted);line-height:1.68}
+    .chips{display:flex;gap:8px;flex-wrap:wrap}
+    .chip{font-size:12px;padding:7px 13px;border-radius:999px;border:1px solid var(--divider);background:var(--warm-white);color:var(--muted);transition:all .22s;cursor:default}
+    .chip:hover{border-color:var(--gold-border);color:var(--gold);background:var(--gold-pale)}
+    .mini-list{list-style:none;display:flex;flex-direction:column;gap:8px}
+    .mini-list li{font-size:14px;color:var(--muted);display:flex;align-items:center;gap:9px}
+    .mini-list li::before{content:'';width:4px;height:4px;border-radius:50%;background:var(--gold);flex-shrink:0}
 
-    /* ===== KEYFRAMES ===== */
-    @keyframes fadeUp { from { opacity:0; transform:translateY(30px); } to { opacity:1; transform:translateY(0); } }
-    @keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
-    @keyframes shimmer { 0% { left:-80%; } 100% { left:130%; } }
-    @keyframes floatY { 0%,100% { transform:translateY(0); } 50% { transform:translateY(-8px); } }
-    @keyframes pulseGold { 0%,100% { box-shadow:0 0 0 0 rgba(184,149,90,0.35); } 50% { box-shadow:0 0 0 10px rgba(184,149,90,0); } }
-    @keyframes rotateSpin { from { transform:rotate(45deg); } to { transform:rotate(405deg); } }
-    @keyframes slideTrack { 0% { transform:translateX(0); } 100% { transform:translateX(-50%); } }
-    @keyframes drawLine { from { width:0; } to { width:100%; } }
-    @keyframes scaleIn { from { opacity:0; transform:scale(0.92); } to { opacity:1; transform:scale(1); } }
-    @keyframes breathe { 0%,100% { opacity:0.6; transform:scale(1); } 50% { opacity:1; transform:scale(1.05); } }
+    /* REVIEWS */
+    .reviews-section{padding:64px 0;overflow:hidden}
+    .reviews-header{display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:44px;gap:20px;flex-wrap:wrap}
+    .rating-badge{display:flex;align-items:center;gap:16px;background:var(--card-bg);border:1px solid var(--divider);border-radius:var(--radius-lg);padding:18px 24px;box-shadow:0 2px 24px rgba(26,23,20,.05);flex-shrink:0}
+    .rating-num{font-family:var(--serif);font-size:42px;font-weight:300;color:var(--gold);line-height:1}
+    .rating-meta{display:flex;flex-direction:column;gap:5px}
+    .stars{display:flex;gap:3px}
+    .star{font-size:14px}
+    .rating-count{font-size:12px;color:var(--muted)}
+    .google-badge{display:inline-flex;align-items:center;gap:5px;font-size:11px;color:var(--muted);margin-top:3px}
+    .reviews-track-wrapper{position:relative;overflow:hidden;padding:10px 0}
+    .reviews-track-wrapper::before,.reviews-track-wrapper::after{content:'';position:absolute;top:0;bottom:0;width:120px;z-index:2;pointer-events:none}
+    .reviews-track-wrapper::before{left:0;background:linear-gradient(to right,var(--warm-white),transparent)}
+    .reviews-track-wrapper::after{right:0;background:linear-gradient(to left,var(--warm-white),transparent)}
+    .reviews-track{display:flex;gap:16px;animation:slideTrack 32s linear infinite;width:max-content}
+    .reviews-track:hover{animation-play-state:paused}
+    .review-card{background:var(--card-bg);border:1px solid var(--divider);border-radius:var(--radius-lg);padding:26px;width:295px;flex-shrink:0;box-shadow:0 2px 24px rgba(26,23,20,.05);transition:box-shadow .3s,transform .3s}
+    .review-card:hover{box-shadow:0 10px 40px rgba(26,23,20,.12);transform:translateY(-4px)}
+    .review-top{display:flex;align-items:center;gap:13px;margin-bottom:13px}
+    .reviewer-avatar{width:42px;height:42px;border-radius:50%;flex-shrink:0;background:var(--gold-pale);border:1px solid var(--gold-border);display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-size:18px;color:var(--gold)}
+    .reviewer-info{flex:1;min-width:0}
+    .reviewer-name{font-size:14px;font-weight:500;color:var(--ink);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+    .review-date{font-size:11.5px;color:var(--muted);margin-top:2px}
+    .review-stars{display:flex;gap:2px;margin-bottom:11px}
+    .review-star{font-size:12px}
+    .review-text{font-size:13.5px;color:var(--muted);line-height:1.68;display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;overflow:hidden}
 
-    .hero-eyebrow { animation: fadeIn 1.1s ease both; }
-    .hero-left    { animation: fadeUp 1s cubic-bezier(0.22,1,0.36,1) 0.12s both; }
-    .hero-right   { animation: fadeUp 1s cubic-bezier(0.22,1,0.36,1) 0.3s both; }
-    .logo-icon { animation: pulseGold 3.5s ease-in-out infinite; }
-    .media-card img { animation: floatY 8s ease-in-out infinite; }
+    /* BOOKING */
+    .booking-grid{display:grid;grid-template-columns:2fr 1fr;gap:20px}
+    .booking-card{background:var(--card-bg);border:1px solid var(--divider);border-radius:var(--radius-lg);padding:28px;box-shadow:0 2px 28px rgba(26,23,20,.05)}
+    .booking-card h3{font-family:var(--serif);font-size:24px;font-weight:400;color:var(--ink);margin-bottom:7px}
+    .booking-card>p{color:var(--muted);font-size:13.5px;margin-bottom:18px}
+    .booking-embed{border-radius:var(--radius);overflow:hidden;border:1px solid var(--divider)}
+    .booking-embed iframe{width:100%;height:720px;border:0;display:block}
+    .info-list{list-style:none;display:flex;flex-direction:column;gap:13px}
+    .info-list li{font-size:13.5px;color:var(--muted);display:flex;align-items:flex-start;gap:10px;padding-bottom:13px;border-bottom:1px solid var(--divider)}
+    .info-list li:last-child{border-bottom:none;padding-bottom:0}
+    .info-list li::before{content:'';width:5px;height:5px;border-radius:50%;background:var(--gold);flex-shrink:0;margin-top:6px}
 
-    /* ===== HEADER ===== */
-    .topbar {
-      position: sticky; top: 0; z-index: 1000;
-      background: rgba(250,248,244,0.96);
-      backdrop-filter: blur(24px); -webkit-backdrop-filter: blur(24px);
-      border-bottom: 1px solid var(--divider);
-      transition: box-shadow 0.3s, background 0.3s;
-    }
-    .topbar.scrolled {
-      box-shadow: 0 4px 32px rgba(26,23,20,0.08);
-      background: rgba(250,248,244,0.98);
-    }
+    /* GALLERY */
+    .gallery-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+    .shot{border-radius:var(--radius-lg);overflow:hidden;border:1px solid var(--divider);aspect-ratio:4/3;background:linear-gradient(135deg,#e8ddd0,#d4c9b8);position:relative}
+    .shot img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .6s}
+    .shot:hover img{transform:scale(1.06)}
+    .shot-label{position:absolute;bottom:16px;left:16px;background:rgba(250,248,244,.95);backdrop-filter:blur(12px);padding:9px 15px;border-radius:999px;font-size:12px;color:var(--ink);font-weight:500;border:1px solid var(--divider);transition:transform .3s}
+    .shot:hover .shot-label{transform:translateY(-3px)}
 
-    .topbar-inner {
-      display: flex; align-items: center; justify-content: space-between;
-      padding: 14px 48px; max-width: var(--max); margin: 0 auto; gap: 16px;
-    }
+    /* CONTACT */
+    .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+    .contact-card{background:var(--card-bg);border:1px solid var(--divider);border-radius:var(--radius-lg);padding:32px;box-shadow:0 2px 28px rgba(26,23,20,.05)}
+    label{display:block;font-size:11px;font-weight:500;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted);margin:18px 0 9px}
+    label:first-of-type{margin-top:0}
+    input,textarea{width:100%;padding:13px 17px;border-radius:var(--radius-sm);border:1px solid var(--divider);background:var(--warm-white);color:var(--ink);font-family:var(--sans);font-size:14px;outline:none;transition:border-color .22s,box-shadow .22s}
+    input:focus,textarea:focus{border-color:var(--gold);box-shadow:0 0 0 3px rgba(184,149,90,.12)}
+    input::placeholder,textarea::placeholder{color:var(--muted);opacity:.6}
+    textarea{min-height:128px;resize:vertical}
+    .contact-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:22px}
+    .contact-note{font-size:12px;color:var(--muted);margin-top:16px;line-height:1.75}
+    .map-wrapper{border-radius:var(--radius-lg);overflow:hidden;border:1px solid var(--divider)}
+    .map-wrapper iframe{width:100%;height:100%;min-height:440px;border:0;display:block}
 
-    .brand { text-decoration: none; display: flex; align-items: center; gap: 12px; flex-shrink: 0; }
-    .logo-icon {
-      width: 38px; height: 38px; border: 1.5px solid var(--gold); border-radius: 50%;
-      display: flex; align-items: center; justify-content: center; flex-shrink: 0;
-      transition: transform 0.4s cubic-bezier(0.22,1,0.36,1);
-    }
-    .brand:hover .logo-icon { transform: rotate(20deg) scale(1.12); }
-    .logo-icon svg { width: 17px; height: 17px; }
-    .logo-text { font-family: var(--serif); font-size: 25px; font-weight: 400; letter-spacing: 0.5px; color: var(--ink); transition: color 0.2s; }
-    .logo-text span { color: var(--gold); }
-    .brand:hover .logo-text { color: var(--gold); }
+    /* FOOTER */
+    footer{padding:28px 0 36px;border-top:1px solid var(--divider)}
+    .foot{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
+    .foot-brand{font-family:var(--serif);font-size:19px;color:var(--ink);font-weight:400}
+    .foot-copy{font-size:12.5px;color:var(--muted);margin-top:5px}
+    .foot-links{display:flex;gap:22px}
+    .foot-links a{font-size:13px;color:var(--muted);text-decoration:none;transition:color .2s}
+    .foot-links a:hover{color:var(--gold)}
 
-    nav { display: flex; gap: 2px; align-items: center; }
-    nav a {
-      color: var(--muted); font-size: 13.5px; padding: 7px 12px; border-radius: 999px;
-      text-decoration: none; transition: color 0.2s, background 0.2s;
-      position: relative;
+    /* RESPONSIVE */
+    @media(max-width:900px){
+      h1{font-size:36px}.hero-grid{grid-template-columns:1fr}.hero-left{padding:30px 24px}
+      .services-grid{grid-template-columns:1fr}.pricing-top{grid-template-columns:1fr}
+      .pricing-bottom{grid-template-columns:1fr}.trainer-body{grid-template-columns:1fr;padding:24px}
+      .trainer-header{padding:24px}.booking-grid{grid-template-columns:1fr}
+      .contact-grid{grid-template-columns:1fr}.gallery-grid{grid-template-columns:1fr}
+      .highlight-card{grid-template-columns:1fr;gap:20px;padding:26px}
+      .reviews-header{flex-direction:column;align-items:flex-start}
+      section{padding:48px 0}.reviews-section{padding:48px 0}
+    }
+    @media(max-width:520px){
+      h1{font-size:29px}.hero{padding:48px 0 34px}.hero-left{padding:24px 18px}
+      .hero-stats{grid-template-columns:1fr}.section-title-group h2{font-size:28px}
+      .review-card{width:265px}.contact-card{padding:20px}.booking-card{padding:20px}
+      .price-card{padding:22px}.ornament{margin:0 0 48px}
+      .reviews-track-wrapper::before,.reviews-track-wrapper::after{width:60px}
+      .logo-tg{display:none}.logo-nm{font-size:23px}
     }
-    nav a:hover { color: var(--ink); background: var(--gold-pale); }
-
-    .btn {
-      display: inline-flex; align-items: center; justify-content: center;
-      gap: 8px; padding: 11px 22px; border-radius: 999px;
-      font-family: var(--sans); font-size: 13.5px; font-weight: 500;
-      text-decoration: none; cursor: pointer; border: none;
-      transition: all 0.28s cubic-bezier(0.22,1,0.36,1); white-space: nowrap;
-    }
-    .btn-gold {
-      background: var(--gold); color: #fff;
-      box-shadow: 0 4px 20px rgba(184,149,90,0.32);
-    }
-    .btn-gold:hover {
-      background: var(--gold-light);
-      box-shadow: 0 8px 36px rgba(184,149,90,0.48);
-      transform: translateY(-2px);
-    }
-    .btn-outline {
-      background: transparent; color: var(--ink);
-      border: 1px solid var(--divider);
-    }
-    .btn-outline:hover { border-color: var(--gold-border); background: var(--gold-pale); transform: translateY(-1px); }
-    .btn-ghost {
-      background: transparent; color: var(--gold);
-      border: 1.5px solid var(--gold-border);
-    }
-    .btn-ghost:hover { background: var(--gold-pale); transform: translateY(-1px); }
-
-    /* ===== MOBILE MENU — FIXED ===== */
-    .menu-toggle {
-      display: none;
-      width: 44px; height: 44px;
-      background: var(--card-bg);
-      border: 1px solid var(--gold-border);
-      border-radius: 14px;
-      align-items: center; justify-content: center;
-      cursor: pointer;
-      color: var(--ink);
-      box-shadow: 0 2px 16px rgba(184,149,90,0.15);
-      transition: background 0.2s, border-color 0.2s, box-shadow 0.2s;
-      flex-shrink: 0;
-      z-index: 1003;
-      position: relative;
-    }
-    .menu-toggle:hover {
-      background: var(--gold-pale);
-      border-color: var(--gold);
-      box-shadow: 0 4px 20px rgba(184,149,90,0.28);
-    }
-    .menu-toggle svg { display: block; transition: transform 0.3s; }
-    .menu-toggle.open svg { transform: rotate(90deg); }
-
-    /* === OVERLAY === */
-    #menuOverlay {
-      position: fixed; inset: 0;
-      background: rgba(26,23,20,0.5);
-      opacity: 0; visibility: hidden;
-      transition: opacity 0.35s ease, visibility 0.35s ease;
-      z-index: 1001;
-      backdrop-filter: blur(2px);
-      -webkit-backdrop-filter: blur(2px);
-    }
-    #menuOverlay.active { opacity: 1; visibility: visible; }
-
-    .desktop-wa { flex-shrink: 0; }
-
-    @media (max-width: 900px) {
-      .topbar-inner { padding: 12px 20px; }
-      .menu-toggle { display: flex; }
-      .desktop-wa { display: none; }
-
-      /* MOBILE NAV — fully opaque, slides in from left */
-      nav {
-        position: fixed;
-        top: 0; left: -100%;
-        width: 280px; height: 100dvh;
-        background: var(--warm-white); /* fully opaque */
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 80px 20px 40px;
-        gap: 4px;
-        transition: left 0.35s cubic-bezier(0.22,1,0.36,1);
-        z-index: 1002;
-        border-right: 1px solid var(--divider);
-        box-shadow: none;
-        overflow-y: auto;
-      }
-      nav.active {
-        left: 0;
-        box-shadow: 8px 0 48px rgba(26,23,20,0.16);
-      }
-      nav a {
-        font-size: 16px; width: 100%;
-        padding: 12px 16px; border-radius: 14px;
-        color: var(--ink);
-      }
-      nav a:hover { background: var(--gold-pale); color: var(--gold); }
-
-      .nav-wa-mobile {
-        display: flex !important;
-        margin-top: 20px; width: 100%;
-        justify-content: center;
-      }
-    }
-    .nav-wa-mobile { display: none; }
-
-    /* ===== HERO ===== */
-    .hero { padding: 72px 0 52px; }
-
-    .hero-eyebrow {
-      display: inline-flex; align-items: center; gap: 12px;
-      font-size: 11px; font-weight: 500; letter-spacing: 2.5px;
-      text-transform: uppercase; color: var(--gold); margin-bottom: 28px;
-    }
-    .hero-eyebrow::before, .hero-eyebrow::after {
-      content: ''; display: block; width: 32px; height: 1px;
-      background: var(--gold); opacity: 0.5;
-    }
-
-    .hero-grid { display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 24px; align-items: stretch; }
-
-    .hero-left {
-      padding: 52px; background: var(--card-bg); border-radius: var(--radius-lg);
-      border: 1px solid var(--divider); box-shadow: 0 4px 48px rgba(26,23,20,0.07);
-      position: relative; overflow: hidden;
-    }
-    .hero-left::before {
-      content: ''; position: absolute; top:-80px; right:-80px;
-      width:280px; height:280px;
-      background: radial-gradient(circle,rgba(184,149,90,0.12) 0%,transparent 70%);
-      border-radius:50%;
-      animation: breathe 6s ease-in-out infinite;
-    }
-    .hero-left::after {
-      content: ''; position: absolute; bottom:-60px; left:-60px;
-      width:200px; height:200px;
-      background: radial-gradient(circle,rgba(184,149,90,0.08) 0%,transparent 70%);
-      border-radius:50%;
-      animation: breathe 8s ease-in-out infinite 2s;
-    }
-
-    h1 {
-      font-family: var(--serif); font-size: 52px; font-weight: 300;
-      line-height: 1.1; letter-spacing: -0.5px; color: var(--ink);
-      margin: 0 0 20px; position: relative; z-index: 1;
-    }
-    h1 em { font-style: italic; color: var(--gold); }
-    .hero-lead {
-      color: var(--muted); font-size: 15.5px; line-height: 1.72;
-      margin-bottom: 28px; max-width: 430px; position: relative; z-index: 1;
-    }
-
-    .free-badge {
-      display: inline-flex; align-items: center; gap: 9px;
-      background: var(--gold-pale); border: 1px solid var(--gold-border);
-      color: var(--gold); padding: 10px 16px; border-radius: var(--radius-sm);
-      font-size: 13px; font-weight: 500; margin-bottom: 24px;
-      position: relative; overflow: hidden; z-index: 1;
-    }
-    .free-badge::after {
-      content:''; position:absolute; top:0; left:-80%; width:50%; height:100%;
-      background:linear-gradient(90deg,transparent,rgba(255,255,255,0.55),transparent);
-      animation:shimmer 3s ease-in-out infinite;
-    }
-
-    .hero-actions { display: flex; gap: 12px; flex-wrap: wrap; position: relative; z-index: 1; }
-
-    .hero-stats {
-      display:grid; grid-template-columns:repeat(3,1fr);
-      gap:1px; margin-top:36px; background:var(--divider);
-      border-radius:var(--radius-sm); overflow:hidden;
-    }
-    .stat {
-      background:var(--warm-white); padding:18px; text-align:center;
-      transition:background 0.25s, transform 0.25s;
-    }
-    .stat:hover { background:var(--gold-pale); transform:scale(1.02); }
-    .stat-num {
-      font-family:var(--serif); font-size:26px; font-weight:400;
-      color:var(--gold); display:block; line-height:1.2;
-    }
-    .stat-label { font-size:11px; color:var(--muted); letter-spacing:0.4px; display:block; margin-top:4px; }
-
-    .hero-right { display:flex; flex-direction:column; gap:16px; }
-    .media-card {
-      flex:1; border-radius:var(--radius-lg); overflow:hidden; position:relative;
-      min-height:280px; background:linear-gradient(145deg,#e8ddd0,#d4c9b8);
-      border:1px solid var(--divider);
-    }
-    .media-card img {
-      width:100%; height:100%; object-fit:cover; display:block;
-      transition:transform 0.7s ease;
-    }
-    .media-card:hover img { transform:scale(1.05); animation:none; }
-    .media-caption {
-      position:absolute; bottom:16px; left:16px;
-      background:rgba(250,248,244,0.95); backdrop-filter:blur(12px);
-      padding:10px 16px; border-radius:999px; font-size:12px; font-weight:500;
-      color:var(--ink); border:1px solid var(--divider);
-    }
-
-    .info-card {
-      background:var(--card-bg); border:1px solid var(--divider);
-      border-radius:var(--radius-lg); padding:22px;
-      box-shadow:0 2px 24px rgba(26,23,20,0.05);
-    }
-    .info-row { display:flex; align-items:center; gap:10px; font-size:13.5px; color:var(--muted); }
-    .info-dot { width:6px; height:6px; border-radius:50%; background:var(--gold); flex-shrink:0; }
-    .pills-row { display:flex; gap:8px; flex-wrap:wrap; margin-top:14px; }
-    .pill {
-      font-size:11.5px; color:var(--muted); padding:6px 13px;
-      border-radius:999px; border:1px solid var(--divider);
-      background:var(--warm-white); transition:all 0.2s;
-      cursor:default;
-    }
-    .pill:hover { border-color:var(--gold-border); color:var(--gold); background:var(--gold-pale); }
-
-    /* ===== SECTION BASE ===== */
-    section { padding: 64px 0; }
-
-    .section-label {
-      display:inline-flex; align-items:center; gap:10px;
-      font-size:10.5px; font-weight:500; letter-spacing:2.5px;
-      text-transform:uppercase; color:var(--gold); margin-bottom:12px;
-    }
-    .section-label::before { content:''; display:block; width:22px; height:1px; background:var(--gold); opacity:0.6; }
-
-    .section-title-group { margin-bottom: 42px; }
-    .section-title-group h2 {
-      font-family:var(--serif); font-size:38px; font-weight:300;
-      letter-spacing:-0.3px; color:var(--ink); line-height:1.14;
-    }
-    .section-title-group p { color:var(--muted); font-size:15px; margin-top:11px; max-width:520px; }
-
-    .ornament { display:flex; align-items:center; gap:16px; margin:0 0 64px; }
-    .ornament-line { flex:1; height:1px; background:var(--divider); }
-    .ornament-diamond {
-      width:7px; height:7px; background:var(--gold);
-      transform:rotate(45deg); opacity:0.5;
-      animation:rotateSpin 9s linear infinite;
-    }
-
-    /* ===== SERVICES ===== */
-    .services-grid {
-      display:grid; grid-template-columns:repeat(3,1fr);
-      gap:1px; background:var(--divider);
-      border:1px solid var(--divider); border-radius:var(--radius-lg); overflow:hidden;
-    }
-    .service-item {
-      background:var(--card-bg); padding:36px 28px;
-      transition:background 0.3s, transform 0.3s;
-      cursor:default;
-    }
-    .service-item:hover { background:var(--gold-pale); }
-    .service-item:hover .service-num { opacity:0.6; }
-    .service-num {
-      font-family:var(--serif); font-size:46px; font-weight:300;
-      color:var(--gold); opacity:0.22; line-height:1; margin-bottom:14px;
-      transition:opacity 0.3s;
-    }
-    .service-item h3 { font-family:var(--serif); font-size:22px; font-weight:400; color:var(--ink); margin-bottom:9px; }
-    .service-item p { color:var(--muted); font-size:14px; line-height:1.68; }
-
-    .highlight-card {
-      margin-top:20px; background:var(--card-bg);
-      border:1px solid var(--divider); border-radius:var(--radius-lg);
-      padding:38px; display:grid; grid-template-columns:1fr auto;
-      gap:36px; align-items:center;
-      box-shadow:0 2px 32px rgba(26,23,20,0.05);
-      transition:box-shadow 0.3s;
-    }
-    .highlight-card:hover { box-shadow:0 10px 56px rgba(26,23,20,0.1); }
-    .highlight-card h3 { font-family:var(--serif); font-size:28px; font-weight:300; margin-bottom:10px; }
-    .benefits-list { list-style:none; display:flex; flex-direction:column; gap:11px; margin-top:16px; }
-    .benefits-list li { display:flex; align-items:center; gap:13px; font-size:14px; color:var(--muted); }
-    .benefits-list li::before {
-      content:''; width:18px; height:18px; border-radius:50%;
-      background:var(--gold-pale); border:1px solid var(--gold-border);
-      flex-shrink:0;
-      background-image:url("data:image/svg+xml,%3Csvg width='10' height='8' viewBox='0 0 10 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 4L3.5 6.5L9 1' stroke='%23b8955a' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
-      background-repeat:no-repeat; background-position:center;
-    }
-
-    /* ===== PRICING ===== */
-    .pricing-top { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; }
-    .pricing-bottom { display:grid; grid-template-columns:repeat(2,1fr); gap:16px; margin-top:16px; }
-    .price-card {
-      background:var(--card-bg); border:1px solid var(--divider);
-      border-radius:var(--radius-lg); padding:30px; position:relative;
-      transition:box-shadow 0.3s, transform 0.3s;
-    }
-    .price-card:hover { box-shadow:0 18px 60px rgba(26,23,20,0.12); transform:translateY(-5px); }
-    .price-card.featured { border-color:var(--gold); background:linear-gradient(160deg,#fffdf8,#fdf9ee); }
-    .price-card.special { border-color:rgba(184,149,90,0.35); background:linear-gradient(160deg,#fffef8,#fef9ed); }
-    .price-tag {
-      position:absolute; top:18px; right:18px;
-      font-size:10px; font-weight:500; letter-spacing:1px; text-transform:uppercase;
-      color:var(--gold); background:var(--gold-pale);
-      border:1px solid var(--gold-border); padding:5px 10px; border-radius:999px;
-    }
-    .price-tag.new-tag { background:rgba(184,149,90,0.15); color:#7a5218; border-color:rgba(184,149,90,0.4); }
-    .price-card h3 {
-      font-family:var(--serif); font-size:21px; font-weight:400;
-      color:var(--ink); margin-bottom:16px; padding-right:92px; line-height:1.3;
-    }
-    .price-amount { display:flex; align-items:baseline; gap:6px; margin-bottom:7px; }
-    .price-amount .amount { font-family:var(--serif); font-size:34px; font-weight:300; color:var(--ink); }
-    .price-amount .per { font-size:13px; color:var(--muted); }
-    .price-promo {
-      display:inline-flex; align-items:center; gap:6px;
-      font-size:11px; font-weight:500; color:#7a5218;
-      background:rgba(184,149,90,0.15); border:1px solid rgba(184,149,90,0.3);
-      padding:5px 12px; border-radius:999px; margin-top:7px; margin-bottom:4px;
-      position:relative; overflow:hidden;
-    }
-    .price-promo::after {
-      content:''; position:absolute; top:0; left:-80%; width:50%; height:100%;
-      background:linear-gradient(90deg,transparent,rgba(255,255,255,0.6),transparent);
-      animation:shimmer 3.5s ease-in-out infinite;
-    }
-    .price-divider { height:1px; background:var(--divider); margin:18px 0; }
-    .price-features { list-style:none; display:flex; flex-direction:column; gap:9px; }
-    .price-features li { font-size:13.5px; color:var(--muted); display:flex; align-items:center; gap:10px; }
-    .price-features li::before { content:'—'; color:var(--gold); opacity:0.6; font-size:12px; }
-
-    /* ===== TRAINER ===== */
-    .trainer-card {
-      background:var(--card-bg); border:1px solid var(--divider);
-      border-radius:var(--radius-lg); overflow:hidden;
-      box-shadow:0 4px 36px rgba(26,23,20,0.07);
-    }
-    .trainer-header {
-      padding:38px; background:linear-gradient(135deg,#f9f5ee,var(--warm-white));
-      border-bottom:1px solid var(--divider);
-      display:flex; align-items:center; gap:24px; flex-wrap:wrap;
-    }
-    .trainer-avatar {
-      width:84px; height:84px; border-radius:50%; object-fit:cover;
-      border:2px solid var(--gold-border);
-      box-shadow:0 8px 36px rgba(184,149,90,0.22); flex-shrink:0;
-      transition:transform 0.45s, box-shadow 0.45s;
-    }
-    .trainer-avatar:hover { transform:scale(1.07); box-shadow:0 14px 44px rgba(184,149,90,0.35); }
-    .trainer-name { font-family:var(--serif); font-size:30px; font-weight:300; color:var(--ink); margin-bottom:4px; }
-    .trainer-role { font-size:13px; color:var(--muted); letter-spacing:0.3px; margin-bottom:14px; }
-    .trainer-links { display:flex; gap:8px; flex-wrap:wrap; }
-    .link-pill {
-      display:inline-flex; align-items:center; gap:7px;
-      font-size:12.5px; font-weight:500; padding:9px 15px;
-      border-radius:999px; border:1px solid var(--divider);
-      background:var(--card-bg); color:var(--ink); text-decoration:none;
-      transition:all 0.22s;
-    }
-    .link-pill:hover { border-color:var(--gold-border); background:var(--gold-pale); color:var(--gold); transform:translateY(-1px); }
-    .trainer-body {
-      padding:28px 38px 38px;
-      display:grid; grid-template-columns:repeat(2,1fr); gap:22px;
-    }
-    .trainer-block h4 {
-      font-size:10.5px; font-weight:500; letter-spacing:2px;
-      text-transform:uppercase; color:var(--gold); margin-bottom:11px;
-    }
-    .trainer-block p { font-size:14px; color:var(--muted); line-height:1.68; }
-    .chips { display:flex; gap:8px; flex-wrap:wrap; }
-    .chip {
-      font-size:12px; padding:7px 13px; border-radius:999px;
-      border:1px solid var(--divider); background:var(--warm-white);
-      color:var(--muted); transition:all 0.22s; cursor:default;
-    }
-    .chip:hover { border-color:var(--gold-border); color:var(--gold); background:var(--gold-pale); }
-    .mini-list { list-style:none; display:flex; flex-direction:column; gap:8px; }
-    .mini-list li { font-size:14px; color:var(--muted); display:flex; align-items:center; gap:9px; }
-    .mini-list li::before { content:''; width:4px; height:4px; border-radius:50%; background:var(--gold); flex-shrink:0; }
-
-    /* ===== REVIEWS ===== */
-    .reviews-section { padding: 64px 0; overflow: hidden; }
-    .reviews-header {
-      display:flex; align-items:flex-end; justify-content:space-between;
-      margin-bottom:44px; gap:20px; flex-wrap:wrap;
-    }
-    .rating-badge {
-      display:flex; align-items:center; gap:16px;
-      background:var(--card-bg); border:1px solid var(--divider);
-      border-radius:var(--radius-lg); padding:18px 24px;
-      box-shadow:0 2px 24px rgba(26,23,20,0.05); flex-shrink:0;
-    }
-    .rating-num { font-family:var(--serif); font-size:42px; font-weight:300; color:var(--gold); line-height:1; }
-    .rating-meta { display:flex; flex-direction:column; gap:5px; }
-    .stars { display:flex; gap:3px; }
-    .star { font-size:14px; }
-    .rating-count { font-size:12px; color:var(--muted); }
-    .google-badge { display:inline-flex; align-items:center; gap:5px; font-size:11px; color:var(--muted); margin-top:3px; }
-
-    .reviews-track-wrapper {
-      position:relative; overflow:hidden; padding:10px 0;
-    }
-    .reviews-track-wrapper::before,
-    .reviews-track-wrapper::after {
-      content:''; position:absolute; top:0; bottom:0; width:120px; z-index:2; pointer-events:none;
-    }
-    .reviews-track-wrapper::before { left:0; background:linear-gradient(to right,var(--warm-white),transparent); }
-    .reviews-track-wrapper::after  { right:0; background:linear-gradient(to left,var(--warm-white),transparent); }
-
-    .reviews-track {
-      display:flex; gap:16px;
-      animation:slideTrack 32s linear infinite;
-      width:max-content;
-    }
-    .reviews-track:hover { animation-play-state:paused; }
-
-    .review-card {
-      background:var(--card-bg); border:1px solid var(--divider);
-      border-radius:var(--radius-lg); padding:26px; width:295px; flex-shrink:0;
-      box-shadow:0 2px 24px rgba(26,23,20,0.05);
-      transition:box-shadow 0.3s, transform 0.3s;
-    }
-    .review-card:hover { box-shadow:0 10px 40px rgba(26,23,20,0.12); transform:translateY(-4px); }
-    .review-top { display:flex; align-items:center; gap:13px; margin-bottom:13px; }
-    .reviewer-avatar {
-      width:42px; height:42px; border-radius:50%; flex-shrink:0;
-      background:var(--gold-pale); border:1px solid var(--gold-border);
-      display:flex; align-items:center; justify-content:center;
-      font-family:var(--serif); font-size:18px; color:var(--gold);
-    }
-    .reviewer-info { flex:1; min-width:0; }
-    .reviewer-name { font-size:14px; font-weight:500; color:var(--ink); white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
-    .review-date { font-size:11.5px; color:var(--muted); margin-top:2px; }
-    .review-stars { display:flex; gap:2px; margin-bottom:11px; }
-    .review-star { font-size:12px; }
-    .review-text {
-      font-size:13.5px; color:var(--muted); line-height:1.68;
-      display:-webkit-box; -webkit-line-clamp:4; -webkit-box-orient:vertical; overflow:hidden;
-    }
-
-    /* ===== BOOKING ===== */
-    .booking-grid { display:grid; grid-template-columns:2fr 1fr; gap:20px; }
-    .booking-card {
-      background:var(--card-bg); border:1px solid var(--divider);
-      border-radius:var(--radius-lg); padding:28px;
-      box-shadow:0 2px 28px rgba(26,23,20,0.05);
-    }
-    .booking-card h3 { font-family:var(--serif); font-size:24px; font-weight:400; color:var(--ink); margin-bottom:7px; }
-    .booking-card > p { color:var(--muted); font-size:13.5px; margin-bottom:18px; }
-    .booking-embed { border-radius:var(--radius); overflow:hidden; border:1px solid var(--divider); }
-    .booking-embed iframe { width:100%; height:720px; border:0; display:block; }
-    .info-list { list-style:none; display:flex; flex-direction:column; gap:13px; }
-    .info-list li {
-      font-size:13.5px; color:var(--muted);
-      display:flex; align-items:flex-start; gap:10px;
-      padding-bottom:13px; border-bottom:1px solid var(--divider);
-    }
-    .info-list li:last-child { border-bottom:none; padding-bottom:0; }
-    .info-list li::before {
-      content:''; width:5px; height:5px; border-radius:50%;
-      background:var(--gold); flex-shrink:0; margin-top:6px;
-    }
-
-    /* ===== GALLERY ===== */
-    .gallery-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:16px; }
-    .shot {
-      border-radius:var(--radius-lg); overflow:hidden;
-      border:1px solid var(--divider); aspect-ratio:4/3;
-      background:linear-gradient(135deg,#e8ddd0,#d4c9b8); position:relative;
-    }
-    .shot img { width:100%; height:100%; object-fit:cover; display:block; transition:transform 0.6s; }
-    .shot:hover img { transform:scale(1.06); }
-    .shot-label {
-      position:absolute; bottom:16px; left:16px;
-      background:rgba(250,248,244,0.95); backdrop-filter:blur(12px);
-      padding:9px 15px; border-radius:999px; font-size:12px;
-      color:var(--ink); font-weight:500; border:1px solid var(--divider);
-      transition:transform 0.3s;
-    }
-    .shot:hover .shot-label { transform:translateY(-3px); }
-
-    /* ===== CONTACT ===== */
-    .contact-grid { display:grid; grid-template-columns:1fr 1fr; gap:20px; }
-    .contact-card {
-      background:var(--card-bg); border:1px solid var(--divider);
-      border-radius:var(--radius-lg); padding:32px;
-      box-shadow:0 2px 28px rgba(26,23,20,0.05);
-    }
-    label {
-      display:block; font-size:11px; font-weight:500;
-      letter-spacing:1.5px; text-transform:uppercase;
-      color:var(--muted); margin:18px 0 9px;
-    }
-    label:first-of-type { margin-top:0; }
-    input, textarea {
-      width:100%; padding:13px 17px;
-      border-radius:var(--radius-sm); border:1px solid var(--divider);
-      background:var(--warm-white); color:var(--ink);
-      font-family:var(--sans); font-size:14px; outline:none;
-      transition:border-color 0.22s, box-shadow 0.22s;
-    }
-    input:focus, textarea:focus {
-      border-color:var(--gold);
-      box-shadow:0 0 0 3px rgba(184,149,90,0.12);
-    }
-    input::placeholder, textarea::placeholder { color:var(--muted); opacity:0.6; }
-    textarea { min-height:128px; resize:vertical; }
-    .contact-actions { display:flex; gap:12px; flex-wrap:wrap; margin-top:22px; }
-    .contact-note { font-size:12px; color:var(--muted); margin-top:16px; line-height:1.75; }
-    .map-wrapper { border-radius:var(--radius-lg); overflow:hidden; border:1px solid var(--divider); }
-    .map-wrapper iframe { width:100%; height:100%; min-height:440px; border:0; display:block; }
-
-    /* ===== FOOTER ===== */
-    footer { padding:28px 0 36px; border-top:1px solid var(--divider); }
-    .foot { display:flex; justify-content:space-between; align-items:center; gap:16px; flex-wrap:wrap; }
-    .foot-brand { font-family:var(--serif); font-size:19px; color:var(--ink); font-weight:400; }
-    .foot-brand span { color:var(--gold); }
-    .foot-copy { font-size:12.5px; color:var(--muted); margin-top:5px; }
-    .foot-links { display:flex; gap:22px; }
-    .foot-links a { font-size:13px; color:var(--muted); text-decoration:none; transition:color 0.2s; }
-    .foot-links a:hover { color:var(--gold); }
-
-
-
-    /* ===== RESPONSIVE ===== */
-    @media (max-width: 900px) {
-      h1 { font-size: 36px; }
-      .hero-grid { grid-template-columns: 1fr; }
-      .hero-left { padding: 30px 24px; }
-      .services-grid { grid-template-columns: 1fr; }
-      .pricing-top { grid-template-columns: 1fr; }
-      .pricing-bottom { grid-template-columns: 1fr; }
-      .trainer-body { grid-template-columns: 1fr; padding: 24px; }
-      .trainer-header { padding: 24px; }
-      .booking-grid { grid-template-columns: 1fr; }
-      .contact-grid { grid-template-columns: 1fr; }
-      .gallery-grid { grid-template-columns: 1fr; }
-      .highlight-card { grid-template-columns: 1fr; gap: 20px; padding: 26px; }
-      .reviews-header { flex-direction: column; align-items: flex-start; }
-      section { padding: 48px 0; }
-      .reviews-section { padding: 48px 0; }
-    }
-
-    @media (max-width: 520px) {
-      h1 { font-size: 29px; }
-      .hero { padding: 48px 0 34px; }
-      .hero-left { padding: 24px 18px; }
-      .hero-stats { grid-template-columns: 1fr; }
-      .section-title-group h2 { font-size: 28px; }
-      .review-card { width: 265px; }
-      .contact-card { padding: 20px; }
-      .booking-card { padding: 20px; }
-      .price-card { padding: 22px; }
-      .ornament { margin: 0 0 48px; }
-      .reviews-track-wrapper::before,
-      .reviews-track-wrapper::after { width: 60px; }
-    }
-
-    /* ===== PAGE TRANSITION ===== */
-    .page-enter {
-      animation: scaleIn 0.6s cubic-bezier(0.22,1,0.36,1) both;
-    }
-
-    /* ===== GOLD UNDERLINE HOVER for section links ===== */
-    nav a {
-      position: relative; overflow: hidden;
-    }
-    nav a::after {
-      content: ''; position: absolute; bottom: 4px; left: 12px; right: 12px;
-      height: 1px; background: var(--gold); transform: scaleX(0);
-      transition: transform 0.25s cubic-bezier(0.22,1,0.36,1);
-      transform-origin: left;
-    }
-    nav a:hover::after { transform: scaleX(1); }
-
-    /* Service hover line accent */
-    .service-item {
-      border-bottom: 2px solid transparent;
-      transition: background 0.3s, border-color 0.3s;
-    }
-    .service-item:hover { border-bottom-color: var(--gold); }
   </style>
 </head>
-<body class="page-enter">
+<body>
+
+  <!-- SPLASH SCREEN -->
+  <div id="splash">
+    <div class="spl-wrap">
+      <div class="spl-icon">
+        <svg viewBox="0 0 40 40" fill="none">
+          <path d="M20 4C20 4 9 12.5 9 22C9 28 14 33 20 33C26 33 31 28 31 22C31 12.5 20 4 20 4Z" stroke="#b8955a" stroke-width="1.5" stroke-linejoin="round"/>
+          <path d="M14 24.5C15.5 27.5 17.8 29.2 20 29.5" stroke="#b8955a" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <div class="spl-text">
+        <div class="spl-name">My<span class="sg">Fizyo</span></div>
+        <div class="spl-sub">Fizyoterapi &amp; Pilates</div>
+        <div class="spl-line"></div>
+      </div>
+      <div class="spl-bar"></div>
+    </div>
+  </div>
 
   <header class="topbar" id="topbar">
     <div class="topbar-inner">
@@ -708,65 +331,63 @@
             <path d="M6 9.5C6.5 10.5 7.5 11 8 11" stroke="#b8955a" stroke-width="1.2" stroke-linecap="round"/>
           </svg>
         </div>
-        <span class="logo-text">My<span>Fizyo</span></span>
+        <div class="logo-tw">
+          <span class="logo-nm">My<span class="lg">Fizyo</span></span>
+          <span class="logo-tg">Fizyoterapi &amp; Pilates</span>
+        </div>
       </a>
-
-      <button class="menu-toggle" id="menuToggleBtn" onclick="toggleMenu()" aria-label="Menü">
+      <button class="menu-toggle" id="menuToggleBtn" onclick="toggleMenu()" aria-label="Menu">
         <svg id="menuIcon" width="18" height="14" viewBox="0 0 18 14" fill="none">
           <path d="M1 1H17M1 7H17M1 13H17" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
         </svg>
       </button>
-
       <nav id="mobileMenu">
         <a href="#hizmetler" onclick="closeMenu()">Hizmetler</a>
         <a href="#fiyatlar" onclick="closeMenu()">Paketler</a>
-        <a href="#egitmen" onclick="closeMenu()">Eğitmen</a>
+        <a href="#egitmen" onclick="closeMenu()">E&#287;itmen</a>
         <a href="#yorumlar" onclick="closeMenu()">Yorumlar</a>
         <a href="#randevu" onclick="closeMenu()">Randevu</a>
         <a href="#galeri" onclick="closeMenu()">Galeri</a>
-        <a href="#iletisim" onclick="closeMenu()">İletişim</a>
-        <a class="btn btn-gold nav-wa-mobile" id="waBtnMobile" href="#" onclick="closeMenu()">📱 WhatsApp Randevu</a>
+        <a href="#iletisim" onclick="closeMenu()">&#304;leti&#351;im</a>
+        <a class="btn btn-gold nav-wa-mobile" id="waBtnMobile" href="#">&#128241; WhatsApp Randevu</a>
       </nav>
-
       <div id="menuOverlay" onclick="closeMenu()"></div>
       <a class="btn btn-gold desktop-wa" id="waBtn" href="#">WhatsApp Randevu</a>
     </div>
   </header>
 
   <main class="container">
-
-    <!-- HERO -->
     <section class="hero">
-      <div class="hero-eyebrow">Reformer · Mat · Klinik Pilates · Manuel Terapi</div>
+      <div class="hero-eyebrow">Reformer &middot; Mat &middot; Klinik Pilates &middot; Manuel Terapi</div>
       <div class="hero-grid">
         <div class="hero-left">
-          <h1>Daha güçlü bir beden,<br><em>daha iyi bir duruş.</em></h1>
-          <p class="hero-lead">MyFizyo'nda birebir, düet ve küçük grup dersleriyle güvenli ve hedef odaklı pilates. Manuel terapi ve fizyoterapi bakışıyla doğru hareket, doğru progresyon ve kalıcı iyileşme.</p>
+          <h1>Daha g&uuml;&ccedil;l&uuml; bir beden,<br><em>daha iyi bir duru&#351;.</em></h1>
+          <p class="hero-lead">MyFizyo'nda birebir, d&uuml;et ve k&uuml;&ccedil;&uuml;k grup dersleriyle g&uuml;venli ve hedef odakl&#305; pilates. Manuel terapi ve fizyoterapi bak&#305;&#351;&#305;yla do&#287;ru hareket, do&#287;ru progresyon ve kal&#305;c&#305; iyile&#351;me.</p>
           <div class="free-badge">
             <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="6" stroke="#b8955a" stroke-width="1.2"/><path d="M5 7L6.5 8.5L9 5.5" stroke="#b8955a" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            İlk Değerlendirme Ücretsiz
+            &#304;lk De&#287;erlendirme &Uuml;cretsiz
           </div>
           <div class="hero-actions">
-            <a class="btn btn-gold" href="#fiyatlar">Paketleri İncele</a>
-            <a class="btn btn-outline" href="#iletisim">Ücretsiz Ön Görüşme</a>
+            <a class="btn btn-gold" href="#fiyatlar">Paketleri &#304;ncele</a>
+            <a class="btn btn-outline" href="#iletisim">&Uuml;cretsiz &Ouml;n G&ouml;r&uuml;&#351;me</a>
           </div>
           <div class="hero-stats">
             <div class="stat"><span class="stat-num">45 dk</span><span class="stat-label">Standart seans</span></div>
-            <div class="stat"><span class="stat-num">2–3</span><span class="stat-label">Küçük grup</span></div>
-            <div class="stat"><span class="stat-num">Klinik</span><span class="stat-label">Bel–boyun odaklı</span></div>
+            <div class="stat"><span class="stat-num">2&#8211;3</span><span class="stat-label">K&uuml;&ccedil;&uuml;k grup</span></div>
+            <div class="stat"><span class="stat-num">Klinik</span><span class="stat-label">Bel&#8211;boyun odakl&#305;</span></div>
           </div>
         </div>
         <div class="hero-right">
           <div class="media-card">
-            <img src="studio.jpg" alt="MyFizyo Pilates Stüdyosu" loading="eager">
-            <div class="media-caption">MyFizyo Pilates Stüdyosu</div>
+            <img src="studio.jpg" alt="MyFizyo Pilates St&uuml;dyosu" loading="eager">
+            <div class="media-caption">MyFizyo Pilates St&uuml;dyosu</div>
           </div>
           <div class="info-card">
-            <div class="info-row"><div class="info-dot"></div><span>İstanbul / Kartal / Orhantepe</span></div>
-            <div class="info-row" style="margin-top:9px;"><div class="info-dot"></div><span>Hafta içi 09:00 – 21:00</span></div>
+            <div class="info-row"><div class="info-dot"></div><span>&#304;stanbul / Kartal / Orhantepe</span></div>
+            <div class="info-row" style="margin-top:9px"><div class="info-dot"></div><span>Hafta i&ccedil;i 09:00 &#8211; 21:00</span></div>
             <div class="pills-row">
-              <span class="pill">Yeni başlayanlara uygun</span>
-              <span class="pill">Postür odaklı</span>
+              <span class="pill">Yeni ba&#351;layanlara uygun</span>
+              <span class="pill">Post&uuml;r odakl&#305;</span>
               <span class="pill">Reformer dersleri</span>
               <span class="pill">Manuel Terapi</span>
             </div>
@@ -777,125 +398,100 @@
 
     <div class="ornament"><div class="ornament-line"></div><div class="ornament-diamond"></div><div class="ornament-line"></div></div>
 
-    <!-- SERVICES -->
     <section id="hizmetler">
       <div class="section-title-group reveal">
         <div class="section-label">Hizmetler</div>
-        <h2>İhtiyacına göre planlanan,<br>ölçülebilir ilerleme.</h2>
-        <p>Her seans; hedef, seviye ve güvenli progresyon odağında tasarlanır.</p>
+        <h2>&#304;htiyac&#305;na g&ouml;re planlanan,<br>&ouml;l&ccedil;&uuml;lebilir ilerleme.</h2>
+        <p>Her seans; hedef, seviye ve g&uuml;venli progresyon oda&#287;&#305;nda tasarlan&#305;r.</p>
       </div>
       <div class="services-grid reveal">
-        <div class="service-item">
-          <div class="service-num">01</div>
-          <h3>Reformer Pilates</h3>
-          <p>Güç, denge ve esnekliği aynı anda geliştiren reformer seansları.</p>
-        </div>
-        <div class="service-item">
-          <div class="service-num">02</div>
-          <h3>Mat Pilates</h3>
-          <p>Temel kontrol, core stabilizasyonu ve mobilite odaklı mat dersleri.</p>
-        </div>
-        <div class="service-item">
-          <div class="service-num">03</div>
-          <h3>Manuel Terapi</h3>
-          <p>Ağrıyı azaltan, hareketi artıran ve hızlı rahatlama sağlayan fizyoterapi yaklaşımı.</p>
-        </div>
+        <div class="service-item"><div class="service-num">01</div><h3>Reformer Pilates</h3><p>G&uuml;&ccedil;, denge ve esnekli&#287;i ayn&#305; anda geli&#351;tiren reformer seanslar&#305;.</p></div>
+        <div class="service-item"><div class="service-num">02</div><h3>Mat Pilates</h3><p>Temel kontrol, core stabilizasyonu ve mobilite odakl&#305; mat dersleri.</p></div>
+        <div class="service-item"><div class="service-num">03</div><h3>Manuel Terapi</h3><p>A&#287;r&#305;y&#305; azaltan, hareketi art&#305;ran ve h&#305;zl&#305; rahatlama sa&#287;layan fizyoterapi yakla&#351;&#305;m&#305;.</p></div>
       </div>
       <div class="highlight-card reveal">
         <div>
-          <div class="section-label">Neden Önemli?</div>
-          <h3>Manuel Terapi Farkı</h3>
-          <p style="color:var(--muted);font-size:14px;margin-top:9px;">Manuel terapi, kas ve eklem problemlerinin doğrudan hedef alınarak tedavi edilmesini sağlar. Özellikle bel, boyun ve duruş bozukluklarında hızlı ve etkili sonuçlar elde edilir.</p>
+          <div class="section-label">Neden &Ouml;nemli?</div>
+          <h3>Manuel Terapi Fark&#305;</h3>
+          <p style="color:var(--muted);font-size:14px;margin-top:9px">Manuel terapi, kas ve eklem problemlerinin do&#287;rudan hedef al&#305;narak tedavi edilmesini sa&#287;lar.</p>
           <ul class="benefits-list">
-            <li>Ağrıyı hızlı şekilde azaltır</li>
-            <li>Kas ve eklem hareketliliğini artırır</li>
-            <li>Duruş bozukluklarını düzeltmeye yardımcı olur</li>
-            <li>Pilates ile birlikte daha kalıcı sonuç sağlar</li>
+            <li>A&#287;r&#305;y&#305; h&#305;zl&#305; &#351;ekilde azalt&#305;r</li>
+            <li>Kas ve eklem hareketlili&#287;ini art&#305;r&#305;r</li>
+            <li>Duru&#351; bozukluklar&#305;n&#305; d&uuml;zeltmeye yard&#305;mc&#305; olur</li>
+            <li>Pilates ile birlikte daha kal&#305;c&#305; sonu&ccedil; sa&#287;lar</li>
           </ul>
         </div>
-        <div style="flex-shrink:0;"><a class="btn btn-gold" href="#iletisim">Değerlendirme Randevusu</a></div>
+        <div style="flex-shrink:0"><a class="btn btn-gold" href="#iletisim">De&#287;erlendirme Randevusu</a></div>
       </div>
     </section>
 
-    <!-- PRICING -->
     <section id="fiyatlar">
       <div class="section-title-group reveal">
         <div class="section-label">Paketler</div>
-        <h2>Size özel seçenekler.</h2>
-        <p>Hedeflerinize ve bütçenize uygun ders paketi seçin.</p>
+        <h2>Size &ouml;zel se&ccedil;enekler.</h2>
+        <p>Hedeflerinize ve b&uuml;t&ccedil;enize uygun ders paketi se&ccedil;in.</p>
       </div>
       <div class="pricing-top">
         <div class="price-card reveal reveal-delay-1">
-          <div class="price-tag">Düet</div>
-          <h3>Düet (2 kişi)</h3>
-          <div class="price-amount"><span class="amount">₺3.500</span><span class="per">/ 8 ders</span></div>
-          <div class="price-amount"><span class="amount" style="font-size:25px;color:var(--muted)">₺6.500</span><span class="per">/ 16 ders</span></div>
+          <div class="price-tag">D&uuml;et</div>
+          <h3>D&uuml;et (2 ki&#351;i)</h3>
+          <div class="price-amount"><span class="amount">&#8378;3.500</span><span class="per">/ 8 ders</span></div>
+          <div class="price-amount"><span class="amount" style="font-size:25px;color:var(--muted)">&#8378;6.500</span><span class="per">/ 16 ders</span></div>
           <div class="price-divider"></div>
-          <ul class="price-features"><li>45 dk / seans</li><li>2 kişi birlikte</li></ul>
-          <div style="margin-top:22px;"><a class="btn btn-ghost" href="#iletisim" style="width:100%;">Randevu Al</a></div>
+          <ul class="price-features"><li>45 dk / seans</li><li>2 ki&#351;i birlikte</li></ul>
+          <div style="margin-top:22px"><a class="btn btn-ghost" href="#iletisim" style="width:100%">Randevu Al</a></div>
         </div>
         <div class="price-card featured reveal reveal-delay-2">
-          <div class="price-tag">En Çok Tercih</div>
-          <h3>Birebir (1 kişi)</h3>
-          <div class="price-amount"><span class="amount">₺4.500</span><span class="per">/ 8 ders</span></div>
-          <div class="price-amount"><span class="amount" style="font-size:25px;color:var(--muted)">₺8.500</span><span class="per">/ 16 ders</span></div>
+          <div class="price-tag">En &Ccedil;ok Tercih</div>
+          <h3>Birebir (1 ki&#351;i)</h3>
+          <div class="price-amount"><span class="amount">&#8378;4.500</span><span class="per">/ 8 ders</span></div>
+          <div class="price-amount"><span class="amount" style="font-size:25px;color:var(--muted)">&#8378;8.500</span><span class="per">/ 16 ders</span></div>
           <div class="price-divider"></div>
-          <ul class="price-features"><li>Kişiye özel program</li><li>Takip &amp; gelişim planı</li></ul>
-          <div style="margin-top:22px;"><a class="btn btn-gold" href="#iletisim" style="width:100%;">Randevu Al</a></div>
+          <ul class="price-features"><li>Ki&#351;iye &ouml;zel program</li><li>Takip &amp; geli&#351;im plan&#305;</li></ul>
+          <div style="margin-top:22px"><a class="btn btn-gold" href="#iletisim" style="width:100%">Randevu Al</a></div>
         </div>
         <div class="price-card reveal reveal-delay-3">
           <div class="price-tag">Klinik</div>
           <h3>Klinik Pilates</h3>
-          <div class="price-amount"><span class="amount">₺4.500</span><span class="per">/ 8 ders</span></div>
+          <div class="price-amount"><span class="amount">&#8378;4.500</span><span class="per">/ 8 ders</span></div>
           <div class="price-divider"></div>
-          <ul class="price-features"><li>Bel &amp; boyun odaklı</li><li>Fizyoterapi yaklaşımı</li></ul>
-          <div style="margin-top:22px;"><a class="btn btn-ghost" href="#iletisim" style="width:100%;">Randevu Al</a></div>
+          <ul class="price-features"><li>Bel &amp; boyun odakl&#305;</li><li>Fizyoterapi yakla&#351;&#305;m&#305;</li></ul>
+          <div style="margin-top:22px"><a class="btn btn-ghost" href="#iletisim" style="width:100%">Randevu Al</a></div>
         </div>
       </div>
       <div class="pricing-bottom">
         <div class="price-card special reveal reveal-delay-1">
-          <div class="price-tag new-tag">🎉 Açılışa Özel</div>
-          <h3>Manuel Terapi<br><span style="font-size:14px;color:var(--muted);font-weight:300;">Tek Seans + Değerlendirme</span></h3>
-          <div class="price-amount" style="margin-top:9px;"><span class="amount">₺1.600</span><span class="per">/ seans</span></div>
-          <div class="price-promo">✦ Açılışa özel · İlk 2 ay geçerli</div>
+          <div class="price-tag new-tag">&#127881; A&ccedil;&#305;l&#305;&#351;a &Ouml;zel</div>
+          <h3>Manuel Terapi<br><span style="font-size:14px;color:var(--muted);font-weight:300">Tek Seans + De&#287;erlendirme</span></h3>
+          <div class="price-amount" style="margin-top:9px"><span class="amount">&#8378;1.600</span><span class="per">/ seans</span></div>
+          <div class="price-promo">&#10022; A&ccedil;&#305;l&#305;&#351;a &ouml;zel &middot; &#304;lk 2 ay ge&ccedil;erli</div>
           <div class="price-divider"></div>
-          <ul class="price-features">
-            <li>Tek seans manuel terapi</li>
-            <li>Kapsamlı ilk değerlendirme dahil</li>
-            <li>Bel, boyun ve duruş analizi</li>
-            <li>Kişisel tedavi planı</li>
-          </ul>
-          <div style="margin-top:22px;"><a class="btn btn-gold" href="#iletisim" style="width:100%;">Hemen Randevu Al</a></div>
+          <ul class="price-features"><li>Tek seans manuel terapi</li><li>Kapsaml&#305; ilk de&#287;erlendirme dahil</li><li>Bel, boyun ve duru&#351; analizi</li><li>Ki&#351;isel tedavi plan&#305;</li></ul>
+          <div style="margin-top:22px"><a class="btn btn-gold" href="#iletisim" style="width:100%">Hemen Randevu Al</a></div>
         </div>
         <div class="price-card special reveal reveal-delay-2">
-          <div class="price-tag new-tag">🏠 Evde Hizmet</div>
-          <h3>Evde Manuel Terapi<br><span style="font-size:14px;color:var(--muted);font-weight:300;">Kapınıza Geliyoruz</span></h3>
-          <div class="price-amount" style="margin-top:9px;"><span class="amount">₺2.800</span><span class="per">/ seans</span></div>
+          <div class="price-tag new-tag">&#127968; Evde Hizmet</div>
+          <h3>Evde Manuel Terapi<br><span style="font-size:14px;color:var(--muted);font-weight:300">Kap&#305;n&#305;za Geliyoruz</span></h3>
+          <div class="price-amount" style="margin-top:9px"><span class="amount">&#8378;2.800</span><span class="per">/ seans</span></div>
           <div class="price-divider"></div>
-          <ul class="price-features">
-            <li>Kendi evinizde konfor</li>
-            <li>Profesyonel ekipmanla hizmet</li>
-            <li>İstanbul içi ulaşım dahil</li>
-            <li>Randevu saati size özel</li>
-          </ul>
-          <div style="margin-top:22px;"><a class="btn btn-ghost" href="#iletisim" style="width:100%;">Randevu Al</a></div>
+          <ul class="price-features"><li>Kendi evinizde konfor</li><li>Profesyonel ekipmanla hizmet</li><li>&#304;stanbul i&ccedil;i ula&#351;&#305;m dahil</li><li>Randevu saati size &ouml;zel</li></ul>
+          <div style="margin-top:22px"><a class="btn btn-ghost" href="#iletisim" style="width:100%">Randevu Al</a></div>
         </div>
       </div>
     </section>
 
-    <!-- TRAINER -->
     <section id="egitmen">
       <div class="section-title-group reveal">
-        <div class="section-label">Eğitmen</div>
-        <h2>Uzman eşliğinde,<br>güvenli ilerleme.</h2>
-        <p>Her seans; hedef, seviye ve güvenli progresyon odağında planlanır.</p>
+        <div class="section-label">E&#287;itmen</div>
+        <h2>Uzman e&#351;li&#287;inde,<br>g&uuml;venli ilerleme.</h2>
+        <p>Her seans; hedef, seviye ve g&uuml;venli progresyon oda&#287;&#305;nda planlan&#305;r.</p>
       </div>
       <div class="trainer-card reveal">
         <div class="trainer-header">
-          <img class="trainer-avatar" src="egitmen.png" alt="Erva Keleş" loading="lazy">
+          <img class="trainer-avatar" src="egitmen.png" alt="Erva Kele&#351;" loading="lazy">
           <div>
-            <div class="trainer-name">Erva Keleş</div>
-            <div class="trainer-role">Fizyoterapist · Pilates Eğitmeni</div>
+            <div class="trainer-name">Erva Kele&#351;</div>
+            <div class="trainer-role">Fizyoterapist &middot; Pilates E&#287;itmeni</div>
             <div class="trainer-links">
               <a class="link-pill" href="https://instagram.com/fzt.klserva" target="_blank" rel="noopener">
                 <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
@@ -910,7 +506,7 @@
         </div>
         <div class="trainer-body">
           <div class="trainer-block">
-            <h4>Uzmanlık Alanları</h4>
+            <h4>Uzmanl&#305;k Alanlar&#305;</h4>
             <div class="chips">
               <span class="chip">Fizyoterapi ve Rehabilitasyon</span>
               <span class="chip">Klinik Pilates</span>
@@ -920,37 +516,35 @@
             </div>
           </div>
           <div class="trainer-block">
-            <h4>Çalışma Tarzı</h4>
-            <p>Yeni başlayanlara uygun, bire bir kontrollü tempo ve doğru form takibi. Hedefe göre ölçüm ve düzenli ilerleme planı.</p>
+            <h4>&Ccedil;al&#305;&#351;ma Tarz&#305;</h4>
+            <p>Yeni ba&#351;layanlara uygun, bire bir kontroll&uuml; tempo ve do&#287;ru form takibi. Hedefe g&ouml;re &ouml;l&ccedil;&uuml;m ve d&uuml;zenli ilerleme plan&#305;.</p>
           </div>
           <div class="trainer-block">
-            <h4>Seans Formatı</h4>
-            <ul class="mini-list"><li>Birebir / Düet</li><li>Küçük grup (2–3 kişi)</li><li>45 dk standart seans</li></ul>
+            <h4>Seans Format&#305;</h4>
+            <ul class="mini-list"><li>Birebir / D&uuml;et</li><li>K&uuml;&ccedil;&uuml;k grup (2&#8211;3 ki&#351;i)</li><li>45 dk standart seans</li></ul>
           </div>
           <div class="trainer-block">
-            <h4>İletişim</h4>
-            <p>Randevu için WhatsApp'tan yazabilir veya form bırakabilirsiniz.</p>
+            <h4>&#304;leti&#351;im</h4>
+            <p>Randevu i&ccedil;in WhatsApp'tan yazabilir veya form b&#305;rakabilirsiniz.</p>
           </div>
         </div>
       </div>
     </section>
-
   </main>
 
-  <!-- REVIEWS — full width -->
   <section id="yorumlar" class="reviews-section">
     <div class="container">
       <div class="reviews-header reveal">
-        <div class="section-title-group" style="margin-bottom:0;">
-          <div class="section-label">Danışan Yorumları</div>
-          <h2>Danışanlarımız<br>ne diyor?</h2>
-          <p>Google üzerindeki gerçek danışan deneyimleri.</p>
+        <div class="section-title-group" style="margin-bottom:0">
+          <div class="section-label">Dan&#305;&#351;an Yorumlar&#305;</div>
+          <h2>Dan&#305;&#351;anlar&#305;m&#305;z<br>ne diyor?</h2>
+          <p>Google &uuml;zerindeki ger&ccedil;ek dan&#305;&#351;an deneyimleri.</p>
         </div>
         <div class="rating-badge">
           <div class="rating-num">5.0</div>
           <div class="rating-meta">
-            <div class="stars"><span class="star">⭐</span><span class="star">⭐</span><span class="star">⭐</span><span class="star">⭐</span><span class="star">⭐</span></div>
-            <div class="rating-count">Tüm yorumlar 5 yıldız</div>
+            <div class="stars"><span class="star">&#11088;</span><span class="star">&#11088;</span><span class="star">&#11088;</span><span class="star">&#11088;</span><span class="star">&#11088;</span></div>
+            <div class="rating-count">T&uuml;m yorumlar 5 y&#305;ld&#305;z</div>
             <div class="google-badge">
               <svg width="12" height="12" viewBox="0 0 24 24"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
               Google
@@ -959,101 +553,88 @@
         </div>
       </div>
     </div>
-
     <div class="reviews-track-wrapper">
       <div class="reviews-track" id="reviewsTrack">
-        <div class="review-card"><div class="review-top"><div class="reviewer-avatar">A</div><div class="reviewer-info"><div class="reviewer-name">Ayşe Kaya</div><div class="review-date">1 ay önce</div></div></div><div class="review-stars"><span class="review-star">⭐</span><span class="review-star">⭐</span><span class="review-star">⭐</span><span class="review-star">⭐</span><span class="review-star">⭐</span></div><p class="review-text">Erva Hanım gerçekten çok ilgili ve bilgili bir fizyoterapist. Bel ağrılarım için başladım, kısa sürede büyük fark hissettim. Her seansı özenle planlıyor, kesinlikle tavsiye ederim.</p></div>
-        <div class="review-card"><div class="review-top"><div class="reviewer-avatar">M</div><div class="reviewer-info"><div class="reviewer-name">Merve Demir</div><div class="review-date">3 hafta önce</div></div></div><div class="review-stars"><span class="review-star">⭐</span><span class="review-star">⭐</span><span class="review-star">⭐</span><span class="review-star">⭐</span><span class="review-star">⭐</span></div><p class="review-text">Reformer pilates için araştırırken MyFizyo'yu buldum. Birebir ders aldım, hem mekân hem de eğitmen kalitesi mükemmeldi. Postür sorunlarım için harika bir program hazırlandı.</p></div>
-        <div class="review-card"><div class="review-top"><div class="reviewer-avatar">S</div><div class="reviewer-info"><div class="reviewer-name">Selin Arslan</div><div class="review-date">2 ay önce</div></div></div><div class="review-stars"><span class="review-star">⭐</span><span class="review-star">⭐</span><span class="review-star">⭐</span><span class="review-star">⭐</span><span class="review-star">⭐</span></div><p class="review-text">Manuel terapi seansından sonra boyun ağrım büyük ölçüde geçti. Erva Hanım'ın yaklaşımı çok profesyonel; her şeyi detaylıca açıklıyor ve süreci takip ediyor. Teşekkürler!</p></div>
-        <div class="review-card"><div class="review-top"><div class="reviewer-avatar">F</div><div class="reviewer-info"><div class="reviewer-name">Fatma Şahin</div><div class="review-date">5 hafta önce</div></div></div><div class="review-stars"><span class="review-star">⭐</span><span class="review-star">⭐</span><span class="review-star">⭐</span><span class="review-star">⭐</span><span class="review-star">⭐</span></div><p class="review-text">Klinik pilates programına katıldım. Erva Hanım çok sabırlı ve yol gösterici. Yeni başlayan biri olarak hiç zorlanmadım, her hareketi özenle öğretti. Çok memnunum.</p></div>
-        <div class="review-card"><div class="review-top"><div class="reviewer-avatar">Z</div><div class="reviewer-info"><div class="reviewer-name">Zeynep Yıldız</div><div class="review-date">6 hafta önce</div></div></div><div class="review-stars"><span class="review-star">⭐</span><span class="review-star">⭐</span><span class="review-star">⭐</span><span class="review-star">⭐</span><span class="review-star">⭐</span></div><p class="review-text">Kartal'da bu kalitede bir fizyoterapi kliniği bulmak harika. Evde hizmet seçeneğini de denedim, çok pratik. Profesyonellik ve ilgi açısından puan kırmak mümkün değil.</p></div>
-        <div class="review-card"><div class="review-top"><div class="reviewer-avatar">B</div><div class="reviewer-info"><div class="reviewer-name">Büşra Çelik</div><div class="review-date">2 ay önce</div></div></div><div class="review-stars"><span class="review-star">⭐</span><span class="review-star">⭐</span><span class="review-star">⭐</span><span class="review-star">⭐</span><span class="review-star">⭐</span></div><p class="review-text">İlk değerlendirme seansından itibaren çok ciddi bir yaklaşım olduğunu hissettim. Kupa terapi çok işe yaradı, duruşum ve hareket kabiliyetim belirgin şekilde düzeldi.</p></div>
-        <div class="review-card"><div class="review-top"><div class="reviewer-avatar">N</div><div class="reviewer-info"><div class="reviewer-name">Neslihan Öztürk</div><div class="review-date">3 ay önce</div></div></div><div class="review-stars"><span class="review-star">⭐</span><span class="review-star">⭐</span><span class="review-star">⭐</span><span class="review-star">⭐</span><span class="review-star">⭐</span></div><p class="review-text">Annem için fizyoterapi arayışındaydım. MyFizyo'nun evde hizmet seçeneği tam ihtiyacımıza uydu. Erva Hanım'ın empati kurma ve açıklama becerisi gerçekten takdire şayan.</p></div>
-        <div class="review-card"><div class="review-top"><div class="reviewer-avatar">D</div><div class="reviewer-info"><div class="reviewer-name">Deniz Karataş</div><div class="review-date">7 hafta önce</div></div></div><div class="review-stars"><span class="review-star">⭐</span><span class="review-star">⭐</span><span class="review-star">⭐</span><span class="review-star">⭐</span><span class="review-star">⭐</span></div><p class="review-text">Mat pilates derslerini çok sevdim. Küçük grup formatı hem sosyal hem de verimli. Her hafta gelişim hissediyorum, Erva Hanım'ın programı gerçekten sistematik ve kişiye özel.</p></div>
-        <!-- Duplicate for seamless loop -->
-        <div class="review-card"><div class="review-top"><div class="reviewer-avatar">A</div><div class="reviewer-info"><div class="reviewer-name">Ayşe Kaya</div><div class="review-date">1 ay önce</div></div></div><div class="review-stars"><span class="review-star">⭐</span><span class="review-star">⭐</span><span class="review-star">⭐</span><span class="review-star">⭐</span><span class="review-star">⭐</span></div><p class="review-text">Erva Hanım gerçekten çok ilgili ve bilgili bir fizyoterapist. Bel ağrılarım için başladım, kısa sürede büyük fark hissettim. Her seansı özenle planlıyor, kesinlikle tavsiye ederim.</p></div>
-        <div class="review-card"><div class="review-top"><div class="reviewer-avatar">M</div><div class="reviewer-info"><div class="reviewer-name">Merve Demir</div><div class="review-date">3 hafta önce</div></div></div><div class="review-stars"><span class="review-star">⭐</span><span class="review-star">⭐</span><span class="review-star">⭐</span><span class="review-star">⭐</span><span class="review-star">⭐</span></div><p class="review-text">Reformer pilates için araştırırken MyFizyo'yu buldum. Birebir ders aldım, hem mekân hem de eğitmen kalitesi mükemmeldi. Postür sorunlarım için harika bir program hazırlandı.</p></div>
-        <div class="review-card"><div class="review-top"><div class="reviewer-avatar">S</div><div class="reviewer-info"><div class="reviewer-name">Selin Arslan</div><div class="review-date">2 ay önce</div></div></div><div class="review-stars"><span class="review-star">⭐</span><span class="review-star">⭐</span><span class="review-star">⭐</span><span class="review-star">⭐</span><span class="review-star">⭐</span></div><p class="review-text">Manuel terapi seansından sonra boyun ağrım büyük ölçüde geçti. Erva Hanım'ın yaklaşımı çok profesyonel; her şeyi detaylıca açıklıyor ve süreci takip ediyor. Teşekkürler!</p></div>
-        <div class="review-card"><div class="review-top"><div class="reviewer-avatar">F</div><div class="reviewer-info"><div class="reviewer-name">Fatma Şahin</div><div class="review-date">5 hafta önce</div></div></div><div class="review-stars"><span class="review-star">⭐</span><span class="review-star">⭐</span><span class="review-star">⭐</span><span class="review-star">⭐</span><span class="review-star">⭐</span></div><p class="review-text">Klinik pilates programına katıldım. Erva Hanım çok sabırlı ve yol gösterici. Yeni başlayan biri olarak hiç zorlanmadım, her hareketi özenle öğretti. Çok memnunum.</p></div>
-        <div class="review-card"><div class="review-top"><div class="reviewer-avatar">Z</div><div class="reviewer-info"><div class="reviewer-name">Zeynep Yıldız</div><div class="review-date">6 hafta önce</div></div></div><div class="review-stars"><span class="review-star">⭐</span><span class="review-star">⭐</span><span class="review-star">⭐</span><span class="review-star">⭐</span><span class="review-star">⭐</span></div><p class="review-text">Kartal'da bu kalitede bir fizyoterapi kliniği bulmak harika. Evde hizmet seçeneğini de denedim, çok pratik. Profesyonellik ve ilgi açısından puan kırmak mümkün değil.</p></div>
-        <div class="review-card"><div class="review-top"><div class="reviewer-avatar">B</div><div class="reviewer-info"><div class="reviewer-name">Büşra Çelik</div><div class="review-date">2 ay önce</div></div></div><div class="review-stars"><span class="review-star">⭐</span><span class="review-star">⭐</span><span class="review-star">⭐</span><span class="review-star">⭐</span><span class="review-star">⭐</span></div><p class="review-text">İlk değerlendirme seansından itibaren çok ciddi bir yaklaşım olduğunu hissettim. Kupa terapi çok işe yaradı, duruşum ve hareket kabiliyetim belirgin şekilde düzeldi.</p></div>
-        <div class="review-card"><div class="review-top"><div class="reviewer-avatar">N</div><div class="reviewer-info"><div class="reviewer-name">Neslihan Öztürk</div><div class="review-date">3 ay önce</div></div></div><div class="review-stars"><span class="review-star">⭐</span><span class="review-star">⭐</span><span class="review-star">⭐</span><span class="review-star">⭐</span><span class="review-star">⭐</span></div><p class="review-text">Annem için fizyoterapi arayışındaydım. MyFizyo'nun evde hizmet seçeneği tam ihtiyacımıza uydu. Erva Hanım'ın empati kurma ve açıklama becerisi gerçekten takdire şayan.</p></div>
-        <div class="review-card"><div class="review-top"><div class="reviewer-avatar">D</div><div class="reviewer-info"><div class="reviewer-name">Deniz Karataş</div><div class="review-date">7 hafta önce</div></div></div><div class="review-stars"><span class="review-star">⭐</span><span class="review-star">⭐</span><span class="review-star">⭐</span><span class="review-star">⭐</span><span class="review-star">⭐</span></div><p class="review-text">Mat pilates derslerini çok sevdim. Küçük grup formatı hem sosyal hem de verimli. Her hafta gelişim hissediyorum, Erva Hanım'ın programı gerçekten sistematik ve kişiye özel.</p></div>
+        <div class="review-card"><div class="review-top"><div class="reviewer-avatar">A</div><div class="reviewer-info"><div class="reviewer-name">Ay&#351;e Kaya</div><div class="review-date">1 ay &ouml;nce</div></div></div><div class="review-stars"><span class="review-star">&#11088;</span><span class="review-star">&#11088;</span><span class="review-star">&#11088;</span><span class="review-star">&#11088;</span><span class="review-star">&#11088;</span></div><p class="review-text">Erva Han&#305;m ger&ccedil;ekten &ccedil;ok ilgili ve bilgili bir fizyoterapist. Bel a&#287;r&#305;lar&#305;m i&ccedil;in ba&#351;lad&#305;m, k&#305;sa s&uuml;rede b&uuml;y&uuml;k fark hissettim. Her seans&#305; &ouml;zenle planl&#305;yor, kesinlikle tavsiye ederim.</p></div>
+        <div class="review-card"><div class="review-top"><div class="reviewer-avatar">M</div><div class="reviewer-info"><div class="reviewer-name">Merve Demir</div><div class="review-date">3 hafta &ouml;nce</div></div></div><div class="review-stars"><span class="review-star">&#11088;</span><span class="review-star">&#11088;</span><span class="review-star">&#11088;</span><span class="review-star">&#11088;</span><span class="review-star">&#11088;</span></div><p class="review-text">Reformer pilates i&ccedil;in ara&#351;t&#305;r&#305;rken MyFizyo'yu buldum. Birebir ders ald&#305;m, hem mek&acirc;n hem de e&#287;itmen kalitesi m&uuml;kemmeldi. Post&uuml;r sorunlar&#305;m i&ccedil;in harika bir program haz&#305;rland&#305;.</p></div>
+        <div class="review-card"><div class="review-top"><div class="reviewer-avatar">S</div><div class="reviewer-info"><div class="reviewer-name">Selin Arslan</div><div class="review-date">2 ay &ouml;nce</div></div></div><div class="review-stars"><span class="review-star">&#11088;</span><span class="review-star">&#11088;</span><span class="review-star">&#11088;</span><span class="review-star">&#11088;</span><span class="review-star">&#11088;</span></div><p class="review-text">Manuel terapi seans&#305;ndan sonra boyun a&#287;r&#305;m b&uuml;y&uuml;k &ouml;l&ccedil;&uuml;de ge&ccedil;ti. Erva Han&#305;m'&#305;n yakla&#351;&#305;m&#305; &ccedil;ok profesyonel; her &#351;eyi detayl&#305;ca a&ccedil;&#305;kl&#305;yor ve s&uuml;reci takip ediyor.</p></div>
+        <div class="review-card"><div class="review-top"><div class="reviewer-avatar">F</div><div class="reviewer-info"><div class="reviewer-name">Fatma &#350;ahin</div><div class="review-date">5 hafta &ouml;nce</div></div></div><div class="review-stars"><span class="review-star">&#11088;</span><span class="review-star">&#11088;</span><span class="review-star">&#11088;</span><span class="review-star">&#11088;</span><span class="review-star">&#11088;</span></div><p class="review-text">Klinik pilates program&#305;na kat&#305;ld&#305;m. Erva Han&#305;m &ccedil;ok sabirl&#305; ve yol g&ouml;sterici. Yeni ba&#351;layan biri olarak hi&ccedil; zorlanmad&#305;m, her hareketi &ouml;zenle &ouml;&#287;retti.</p></div>
+        <div class="review-card"><div class="review-top"><div class="reviewer-avatar">Z</div><div class="reviewer-info"><div class="reviewer-name">Zeynep Y&#305;ld&#305;z</div><div class="review-date">6 hafta &ouml;nce</div></div></div><div class="review-stars"><span class="review-star">&#11088;</span><span class="review-star">&#11088;</span><span class="review-star">&#11088;</span><span class="review-star">&#11088;</span><span class="review-star">&#11088;</span></div><p class="review-text">Kartal'da bu kalitede bir fizyoterapi klini&#287;i bulmak harika. Evde hizmet se&ccedil;ene&#287;ini de denedim, &ccedil;ok pratik. Profesyonellik ve ilgi a&ccedil;&#305;s&#305;ndan puan k&#305;rmak m&uuml;mk&uuml;n de&#287;il.</p></div>
+        <div class="review-card"><div class="review-top"><div class="reviewer-avatar">B</div><div class="reviewer-info"><div class="reviewer-name">B&uuml;&#351;ra &Ccedil;elik</div><div class="review-date">2 ay &ouml;nce</div></div></div><div class="review-stars"><span class="review-star">&#11088;</span><span class="review-star">&#11088;</span><span class="review-star">&#11088;</span><span class="review-star">&#11088;</span><span class="review-star">&#11088;</span></div><p class="review-text">&#304;lk de&#287;erlendirme seans&#305;ndan itibaren &ccedil;ok ciddi bir yakla&#351;&#305;m oldu&#287;unu hissettim. Kupa terapi &ccedil;ok i&#351;e yarad&#305;, duru&#351;um ve hareket kabiliyetim belirgin &#351;ekilde d&uuml;zeldi.</p></div>
+        <div class="review-card"><div class="review-top"><div class="reviewer-avatar">N</div><div class="reviewer-info"><div class="reviewer-name">Neslihan &Ouml;zt&uuml;rk</div><div class="review-date">3 ay &ouml;nce</div></div></div><div class="review-stars"><span class="review-star">&#11088;</span><span class="review-star">&#11088;</span><span class="review-star">&#11088;</span><span class="review-star">&#11088;</span><span class="review-star">&#11088;</span></div><p class="review-text">Annem i&ccedil;in fizyoterapi aray&#305;&#351;&#305;ndayd&#305;m. MyFizyo'nun evde hizmet se&ccedil;ene&#287;i tam ihtiyac&#305;m&#305;za uydu. Erva Han&#305;m'&#305;n empati kurma ve a&ccedil;&#305;klama becerisi ger&ccedil;ekten takdire &#351;ayan.</p></div>
+        <div class="review-card"><div class="review-top"><div class="reviewer-avatar">D</div><div class="reviewer-info"><div class="reviewer-name">Deniz Kara ta&#351;</div><div class="review-date">7 hafta &ouml;nce</div></div></div><div class="review-stars"><span class="review-star">&#11088;</span><span class="review-star">&#11088;</span><span class="review-star">&#11088;</span><span class="review-star">&#11088;</span><span class="review-star">&#11088;</span></div><p class="review-text">Mat pilates derslerini &ccedil;ok sevdim. K&uuml;&ccedil;&uuml;k grup format&#305; hem sosyal hem de verimli. Her hafta geli&#351;im hissediyorum, Erva Han&#305;m'&#305;n program&#305; ger&ccedil;ekten sistematik ve ki&#351;iye &ouml;zel.</p></div>
+        <div class="review-card"><div class="review-top"><div class="reviewer-avatar">A</div><div class="reviewer-info"><div class="reviewer-name">Ay&#351;e Kaya</div><div class="review-date">1 ay &ouml;nce</div></div></div><div class="review-stars"><span class="review-star">&#11088;</span><span class="review-star">&#11088;</span><span class="review-star">&#11088;</span><span class="review-star">&#11088;</span><span class="review-star">&#11088;</span></div><p class="review-text">Erva Han&#305;m ger&ccedil;ekten &ccedil;ok ilgili ve bilgili bir fizyoterapist. Bel a&#287;r&#305;lar&#305;m i&ccedil;in ba&#351;lad&#305;m, k&#305;sa s&uuml;rede b&uuml;y&uuml;k fark hissettim. Kesinlikle tavsiye ederim.</p></div>
+        <div class="review-card"><div class="review-top"><div class="reviewer-avatar">M</div><div class="reviewer-info"><div class="reviewer-name">Merve Demir</div><div class="review-date">3 hafta &ouml;nce</div></div></div><div class="review-stars"><span class="review-star">&#11088;</span><span class="review-star">&#11088;</span><span class="review-star">&#11088;</span><span class="review-star">&#11088;</span><span class="review-star">&#11088;</span></div><p class="review-text">Reformer pilates i&ccedil;in ara&#351;t&#305;r&#305;rken MyFizyo'yu buldum. Birebir ders ald&#305;m, e&#287;itmen kalitesi m&uuml;kemmeldi. Post&uuml;r sorunlar&#305;m i&ccedil;in harika program haz&#305;rland&#305;.</p></div>
+        <div class="review-card"><div class="review-top"><div class="reviewer-avatar">Z</div><div class="reviewer-info"><div class="reviewer-name">Zeynep Y&#305;ld&#305;z</div><div class="review-date">6 hafta &ouml;nce</div></div></div><div class="review-stars"><span class="review-star">&#11088;</span><span class="review-star">&#11088;</span><span class="review-star">&#11088;</span><span class="review-star">&#11088;</span><span class="review-star">&#11088;</span></div><p class="review-text">Kartal'da bu kalitede bir fizyoterapi klini&#287;i bulmak harika. Evde hizmet se&ccedil;ene&#287;ini de denedim, &ccedil;ok pratik. Puan k&#305;rmak m&uuml;mk&uuml;n de&#287;il.</p></div>
+        <div class="review-card"><div class="review-top"><div class="reviewer-avatar">D</div><div class="reviewer-info"><div class="reviewer-name">Deniz Kara ta&#351;</div><div class="review-date">7 hafta &ouml;nce</div></div></div><div class="review-stars"><span class="review-star">&#11088;</span><span class="review-star">&#11088;</span><span class="review-star">&#11088;</span><span class="review-star">&#11088;</span><span class="review-star">&#11088;</span></div><p class="review-text">Mat pilates derslerini &ccedil;ok sevdim. K&uuml;&ccedil;&uuml;k grup format&#305; hem sosyal hem verimli. Her hafta geli&#351;im hissediyorum.</p></div>
       </div>
     </div>
   </section>
 
   <div class="container">
-    <!-- BOOKING -->
     <section id="randevu">
       <div class="section-title-group reveal">
         <div class="section-label">Randevu</div>
         <h2>Online randevu takvimi.</h2>
-        <p>Uygun saatleri canlı olarak görüp randevu oluşturabilirsiniz.</p>
+        <p>Uygun saatleri canl&#305; olarak g&ouml;r&uuml;p randevu olu&#351;turabilirsiniz.</p>
       </div>
       <div class="booking-grid reveal">
         <div class="booking-card">
           <h3>Online Randevu</h3>
-          <p>Takvim üzerinden uygun saatleri seçerek randevu oluşturabilirsiniz.</p>
+          <p>Takvim &uuml;zerinden uygun saatleri se&ccedil;erek randevu olu&#351;turabilirsiniz.</p>
           <div class="booking-embed">
             <iframe src="https://calendly.com/rmnmlkc34/30min" width="100%" height="720" frameborder="0"></iframe>
           </div>
         </div>
         <div class="booking-card">
           <h3>Bilgilendirme</h3>
-          <p>Seans öncesinde bilmeniz gerekenler.</p>
-          <ul class="info-list" style="margin-top:20px;">
-            <li>İlk değerlendirme ücretsizdir</li>
-            <li>Seans süresi: 45 dakika</li>
-            <li>Randevu iptali için 24 saat önceden bilgi veriniz</li>
-            <li>Geç kalınan süre seansa dahildir</li>
+          <p>Seans &ouml;ncesinde bilmeniz gerekenler.</p>
+          <ul class="info-list" style="margin-top:20px">
+            <li>&#304;lk de&#287;erlendirme &uuml;cretsizdir</li>
+            <li>Seans s&uuml;resi: 45 dakika</li>
+            <li>Randevu iptali i&ccedil;in 24 saat &ouml;nceden bilgi veriniz</li>
+            <li>Ge&ccedil; kal&#305;nan s&uuml;re seansa dahildir</li>
           </ul>
-          <div style="margin-top:28px;"><a class="btn btn-gold" href="#iletisim" style="width:100%;">WhatsApp'tan Yaz</a></div>
+          <div style="margin-top:28px"><a class="btn btn-gold" href="#iletisim" style="width:100%">WhatsApp'tan Yaz</a></div>
         </div>
       </div>
     </section>
 
-    <!-- GALLERY -->
     <section id="galeri">
       <div class="section-title-group reveal">
         <div class="section-label">Galeri</div>
-        <h2>Stüdyodan kareler.</h2>
+        <h2>St&uuml;dyodan kareler.</h2>
       </div>
       <div class="gallery-grid">
-        <div class="shot reveal reveal-delay-1"><img src="manuel1.jpg" alt="Manuel Terapi Alanı"><div class="shot-label">Manuel Terapi Alanı</div></div>
-        <div class="shot reveal reveal-delay-2"><img src="manuel2.jpg" alt="Manuel Terapi Alanı"><div class="shot-label">Manuel Terapi Alanı</div></div>
+        <div class="shot reveal reveal-delay-1"><img src="manuel1.jpg" alt="Manuel Terapi Alan&#305;"><div class="shot-label">Manuel Terapi Alan&#305;</div></div>
+        <div class="shot reveal reveal-delay-2"><img src="manuel2.jpg" alt="Manuel Terapi Alan&#305;"><div class="shot-label">Manuel Terapi Alan&#305;</div></div>
       </div>
     </section>
 
-    <!-- CONTACT -->
     <section id="iletisim">
       <div class="section-title-group reveal">
-        <div class="section-label">İletişim</div>
-        <h2>Ön görüşme ve<br>randevu için yazın.</h2>
-        <p>En kısa sürede dönüş yapalım.</p>
+        <div class="section-label">&#304;leti&#351;im</div>
+        <h2>&Ouml;n g&ouml;r&uuml;&#351;me ve<br>randevu i&ccedil;in yaz&#305;n.</h2>
+        <p>En k&#305;sa s&uuml;rede d&ouml;n&uuml;&#351; yapal&#305;m.</p>
       </div>
       <div class="contact-grid reveal">
         <div class="contact-card">
           <form id="contactForm">
-            <label for="name">Ad Soyad</label>
-            <input id="name" name="name" placeholder="Adınız Soyadınız" autocomplete="name" required />
-            <label for="phone">Telefon</label>
-            <input id="phone" name="phone" placeholder="05XX XXX XX XX" autocomplete="tel" required />
-            <label for="message">Mesaj</label>
-            <textarea id="message" name="message" placeholder="Hangi paket veya hizmetle ilgileniyorsunuz?" required></textarea>
+            <label for="cname">Ad Soyad</label>
+            <input id="cname" name="name" placeholder="Ad&#305;n&#305;z Soyad&#305;n&#305;z" autocomplete="name" required />
+            <label for="cphone">Telefon</label>
+            <input id="cphone" name="phone" placeholder="05XX XXX XX XX" autocomplete="tel" required />
+            <label for="cmsg">Mesaj</label>
+            <textarea id="cmsg" name="message" placeholder="Hangi paket veya hizmetle ilgileniyorsunuz?" required></textarea>
             <div class="contact-actions">
-              <button class="btn btn-gold" type="submit">WhatsApp'a Gönder</button>
+              <button class="btn btn-gold" type="submit">WhatsApp'a G&ouml;nder</button>
               <a class="btn btn-outline" id="callBtn" href="#">Ara</a>
             </div>
-            <p class="contact-note">
-              📍 Orhantepe Mahallesi, Kartal / İstanbul &nbsp;·&nbsp;
-              ✉️ info@myfizyo.com.tr &nbsp;·&nbsp;
-              IG: @fzt.klserva
-            </p>
+            <p class="contact-note">&#128205; Orhantepe Mah., Kartal / &#304;stanbul &nbsp;&middot;&nbsp; info@myfizyo.com.tr &nbsp;&middot;&nbsp; @fzt.klserva</p>
           </form>
         </div>
         <div class="map-wrapper reveal reveal-delay-1">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3015.4918574844883!2d29.16165217585306!3d40.90496017136515!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cac34f6f590a7d%3A0x392b36128112de6c!2sMyFizyo!5e0!3m2!1str!2str!4v1775906192519!5m2!1str!2str" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3015.4918574844883!2d29.16165217585306!3d40.90496017136515!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cac34f6f590a7d%3A0x392b36128112de6c!2sMyFizyo!5e0!3m2!1str!2str!4v1775906192519!5m2!1str!2str" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
       </div>
     </section>
@@ -1063,8 +644,8 @@
     <div class="container">
       <div class="foot">
         <div>
-          <div class="foot-brand">My<span>Fizyo</span></div>
-          <div class="foot-copy">© <span id="year"></span> MyFizyo. Tüm hakları saklıdır.</div>
+          <div class="foot-brand"><span style="font-weight:300">My</span><span style="color:var(--gold)">Fizyo</span></div>
+          <div class="foot-copy">&copy; <span id="year"></span> MyFizyo. T&uuml;m haklar&#305; sakl&#305;d&#305;r.</div>
         </div>
         <div class="foot-links">
           <a href="#" id="igLink">Instagram</a>
@@ -1075,90 +656,77 @@
   </footer>
 
   <script>
-    const SETTINGS = {
-      studioName: "MyFizyo",
-      whatsappNumberInternational: "905537141461",
-      phoneNumberTel: "+905537141461",
-      instagramUrl: "https://instagram.com/fzt.klserva",
-      kvkkUrl: "#",
-    };
+    /* SPLASH */
+    (function(){
+      var s = document.getElementById('splash');
+      if(!s) return;
+      function hide(){ s.classList.add('hide'); setTimeout(function(){ s.style.display='none'; }, 950); }
+      if(document.readyState==='loading'){ document.addEventListener('DOMContentLoaded',function(){ setTimeout(hide,2300); }); }
+      else{ setTimeout(hide,2300); }
+    })();
 
-    function waLink(text) {
-      return `https://wa.me/${SETTINGS.whatsappNumberInternational}?text=${encodeURIComponent(text)}`;
-    }
+    /* SETTINGS */
+    var WA = "905537141461", PHONE = "+905537141461", IG = "https://instagram.com/fzt.klserva";
+    function waLink(t){ return "https://wa.me/"+WA+"?text="+encodeURIComponent(t); }
+    var dwa = waLink("MyFizyo i\u00e7in randevu almak istiyorum.\n\u0130smim: ");
+    document.getElementById("waBtn").href = dwa;
+    document.getElementById("waBtnMobile").href = dwa;
+    document.getElementById("callBtn").href = "tel:"+PHONE;
+    document.getElementById("igLink").href = IG;
+    document.getElementById("year").textContent = new Date().getFullYear();
 
-    const defaultWa = waLink(`${SETTINGS.studioName} için randevu almak istiyorum.\nİsmim: `);
-    document.getElementById('waBtn').href = defaultWa;
-    document.getElementById('waBtnMobile').href = defaultWa;
-    document.getElementById('callBtn').href = `tel:${SETTINGS.phoneNumberTel}`;
-    document.getElementById('igLink').href = SETTINGS.instagramUrl;
-    document.getElementById('kvkkLink').href = SETTINGS.kvkkUrl;
-    document.getElementById('year').textContent = new Date().getFullYear();
-
-    document.getElementById('contactForm').addEventListener('submit', (e) => {
+    document.getElementById("contactForm").addEventListener("submit",function(e){
       e.preventDefault();
-      const name = document.getElementById('name').value.trim();
-      const phone = document.getElementById('phone').value.trim();
-      const msg  = document.getElementById('message').value.trim();
-      if (!name || !phone || !msg) { alert('Lütfen tüm alanları doldur.'); return; }
-      window.open(waLink(`Merhaba! ${SETTINGS.studioName} için randevu istiyorum.\n\nAd Soyad: ${name}\nTelefon: ${phone}\nMesaj: ${msg}`), '_blank', 'noopener');
+      var n=document.getElementById("cname").value.trim();
+      var p=document.getElementById("cphone").value.trim();
+      var m=document.getElementById("cmsg").value.trim();
+      if(!n||!p||!m){alert("L\u00fctfen t\u00fcm alanlar\u0131 doldurun.");return;}
+      window.open(waLink("Merhaba! MyFizyo i\u00e7in randevu istiyorum.\n\nAd Soyad: "+n+"\nTelefon: "+p+"\nMesaj: "+m),"_blank","noopener");
     });
 
-    /* ===== MOBILE MENU ===== */
-    let menuOpen = false;
-    function toggleMenu() {
-      menuOpen ? closeMenu() : openMenu();
-    }
-    function openMenu() {
-      menuOpen = true;
+    /* MOBILE MENU */
+    var menuOpen=false;
+    function toggleMenu(){ menuOpen?closeMenu():openMenu(); }
+    function openMenu(){
+      menuOpen=true;
       document.getElementById("mobileMenu").classList.add("active");
       document.getElementById("menuOverlay").classList.add("active");
-      document.getElementById("menuToggleBtn").classList.add("open");
-      document.body.style.overflow = "hidden";
-      /* Change hamburger to X */
-      document.getElementById("menuIcon").innerHTML = `<path d="M2 2L16 16M16 2L2 16" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>`;
+      document.body.style.overflow="hidden";
+      document.getElementById("menuIcon").innerHTML='<path d="M2 2L16 16M16 2L2 16" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>';
     }
-    function closeMenu() {
-      menuOpen = false;
+    function closeMenu(){
+      menuOpen=false;
       document.getElementById("mobileMenu").classList.remove("active");
       document.getElementById("menuOverlay").classList.remove("active");
-      document.getElementById("menuToggleBtn").classList.remove("open");
-      document.body.style.overflow = "";
-      document.getElementById("menuIcon").innerHTML = `<path d="M1 1H17M1 7H17M1 13H17" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>`;
+      document.body.style.overflow="";
+      document.getElementById("menuIcon").innerHTML='<path d="M1 1H17M1 7H17M1 13H17" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>';
     }
 
-    /* ===== SCROLL REVEAL ===== */
-    const ro = new IntersectionObserver((entries) => {
-      entries.forEach(e => {
-        if (e.isIntersecting) { e.target.classList.add('visible'); ro.unobserve(e.target); }
-      });
-    }, { threshold: 0.07, rootMargin: '0px 0px -24px 0px' });
-    document.querySelectorAll('.reveal').forEach(el => ro.observe(el));
+    /* REVEAL */
+    var ro=new IntersectionObserver(function(entries){
+      entries.forEach(function(e){ if(e.isIntersecting){e.target.classList.add("visible");ro.unobserve(e.target);} });
+    },{threshold:0.07,rootMargin:"0px 0px -24px 0px"});
+    document.querySelectorAll(".reveal").forEach(function(el){ ro.observe(el); });
 
-    /* ===== HEADER SHADOW ===== */
-    window.addEventListener('scroll', () => {
-      document.getElementById('topbar').classList.toggle('scrolled', window.scrollY > 10);
-    }, { passive: true });
+    /* HEADER */
+    window.addEventListener("scroll",function(){ document.getElementById("topbar").classList.toggle("scrolled",window.scrollY>10); },{passive:true});
 
-    /* ===== REVIEWS TOUCH ===== */
-    const track = document.getElementById('reviewsTrack');
-    track.addEventListener('touchstart', () => { track.style.animationPlayState = 'paused'; }, { passive: true });
-    track.addEventListener('touchend',   () => { track.style.animationPlayState = 'running'; }, { passive: true });
+    /* REVIEWS TOUCH */
+    var track=document.getElementById("reviewsTrack");
+    track.addEventListener("touchstart",function(){ track.style.animationPlayState="paused"; },{passive:true});
+    track.addEventListener("touchend",function(){ track.style.animationPlayState="running"; },{passive:true});
 
-    /* ===== SMOOTH ANCHOR with offset for sticky header ===== */
-    document.querySelectorAll('a[href^="#"]').forEach(a => {
-      a.addEventListener('click', (e) => {
-        const id = a.getAttribute('href').slice(1);
-        if (!id) return;
-        const target = document.getElementById(id);
-        if (!target) return;
+    /* SMOOTH ANCHOR */
+    document.querySelectorAll('a[href^="#"]').forEach(function(a){
+      a.addEventListener("click",function(e){
+        var id=a.getAttribute("href").slice(1);
+        if(!id) return;
+        var t=document.getElementById(id);
+        if(!t) return;
         e.preventDefault();
-        const offset = 80;
-        const top = target.getBoundingClientRect().top + window.scrollY - offset;
-        window.scrollTo({ top, behavior: 'smooth' });
+        window.scrollTo({top:t.getBoundingClientRect().top+window.scrollY-80,behavior:"smooth"});
       });
     });
   </script>
-
 </body>
 </html>
