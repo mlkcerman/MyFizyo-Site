@@ -252,6 +252,9 @@
 
     /* GALLERY */
     .gallery-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+    .gallery-category-label{font-family:var(--serif);font-size:20px;font-weight:300;color:var(--ink);margin-bottom:16px;display:flex;align-items:center;gap:14px}
+    .gallery-category-label::before{content:'';display:block;width:22px;height:1px;background:var(--gold);opacity:.6;flex-shrink:0}
+    .gallery-category-label::after{content:'';flex:1;height:1px;background:var(--divider)}
     .shot{border-radius:var(--radius-lg);overflow:hidden;border:1px solid var(--divider);aspect-ratio:4/3;background:linear-gradient(135deg,#e8ddd0,#d4c9b8);position:relative}
     .shot img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .6s}
     .shot:hover img{transform:scale(1.06)}
@@ -493,9 +496,9 @@
             <div class="trainer-name">Erva Kele&#351;</div>
             <div class="trainer-role">Fizyoterapist &middot; Pilates E&#287;itmeni</div>
             <div class="trainer-links">
-              <a class="link-pill" href="https://instagram.com/fzt.klserva" target="_blank" rel="noopener">
+              <a class="link-pill" href="https://instagram.com/my.fizyo" target="_blank" rel="noopener">
                 <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
-                @fzt.klserva
+                @my.fizyo
               </a>
               <a class="link-pill" href="#iletisim">
                 <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
@@ -605,9 +608,44 @@
         <div class="section-label">Galeri</div>
         <h2>St&uuml;dyodan kareler.</h2>
       </div>
+
+      <!-- Pilates Stüdyo Alanı -->
+      <div class="gallery-category-label reveal">Pilates St&uuml;dyo Alan&#305;</div>
+      <div class="gallery-grid" style="margin-bottom:32px">
+        <div class="shot reveal reveal-delay-1">
+          <img src="pilates1.jpg" alt="Pilates St&uuml;dyo Alan&#305;">
+          <div class="shot-label">Pilates St&uuml;dyo Alan&#305;</div>
+        </div>
+        <div class="shot reveal reveal-delay-2">
+          <img src="pilates2.jpg" alt="Pilates St&uuml;dyo Alan&#305;">
+          <div class="shot-label">Pilates St&uuml;dyo Alan&#305;</div>
+        </div>
+      </div>
+
+      <!-- Manuel Terapi Alanı -->
+      <div class="gallery-category-label reveal">Manuel Terapi Alan&#305;</div>
+      <div class="gallery-grid" style="margin-bottom:32px">
+        <div class="shot reveal reveal-delay-1">
+          <img src="manuel1.jpg" alt="Manuel Terapi Alan&#305;">
+          <div class="shot-label">Manuel Terapi Alan&#305;</div>
+        </div>
+        <div class="shot reveal reveal-delay-2">
+          <img src="manuel2.jpg" alt="Manuel Terapi Alan&#305;">
+          <div class="shot-label">Manuel Terapi Alan&#305;</div>
+        </div>
+      </div>
+
+      <!-- Giyinme Alanı -->
+      <div class="gallery-category-label reveal">Giyinme Alan&#305;</div>
       <div class="gallery-grid">
-        <div class="shot reveal reveal-delay-1"><img src="manuel1.jpg" alt="Manuel Terapi Alan&#305;"><div class="shot-label">Manuel Terapi Alan&#305;</div></div>
-        <div class="shot reveal reveal-delay-2"><img src="manuel2.jpg" alt="Manuel Terapi Alan&#305;"><div class="shot-label">Manuel Terapi Alan&#305;</div></div>
+        <div class="shot reveal reveal-delay-1">
+          <img src="giyinme1.jpg" alt="Giyinme Alan&#305;">
+          <div class="shot-label">Giyinme Alan&#305;</div>
+        </div>
+        <div class="shot reveal reveal-delay-2">
+          <img src="giyinme2.jpg" alt="Giyinme Alan&#305;">
+          <div class="shot-label">Giyinme Alan&#305;</div>
+        </div>
       </div>
     </section>
 
@@ -630,7 +668,7 @@
               <button class="btn btn-gold" type="submit">WhatsApp'a G&ouml;nder</button>
               <a class="btn btn-outline" id="callBtn" href="#">Ara</a>
             </div>
-            <p class="contact-note">&#128205; Orhantepe Mah., Kartal / &#304;stanbul &nbsp;&middot;&nbsp; info@myfizyo.com.tr &nbsp;&middot;&nbsp; @fzt.klserva</p>
+            <p class="contact-note">&#128205; Orhantepe Mah., Kartal / &#304;stanbul &nbsp;&middot;&nbsp; info@myfizyo.com.tr &nbsp;&middot;&nbsp; @my.fizyo</p>
           </form>
         </div>
         <div class="map-wrapper reveal reveal-delay-1">
@@ -666,7 +704,7 @@
     })();
 
     /* SETTINGS */
-    var WA = "905537141461", PHONE = "+905537141461", IG = "https://instagram.com/fzt.klserva";
+    var WA = "905537141461", PHONE = "+905537141461", IG = "https://instagram.com/my.fizyo";
     function waLink(t){ return "https://wa.me/"+WA+"?text="+encodeURIComponent(t); }
     var dwa = waLink("MyFizyo i\u00e7in randevu almak istiyorum.\n\u0130smim: ");
     document.getElementById("waBtn").href = dwa;
