@@ -577,7 +577,7 @@
             <li>Pilates ile birlikte daha kal&#305;c&#305; sonu&ccedil; sa&#287;lar</li>
           </ul>
         </div>
-        <div style="flex-shrink:0"><a class="btn btn-gold" href="#iletisim">De&#287;erlendirme Randevusu</a></div>
+        <div style="flex-shrink:0"><a class="btn btn-gold" href="#randevu">De&#287;erlendirme Randevusu</a></div>
       </div>
     </section>
  
@@ -616,7 +616,7 @@
             <li>TAKİP &amp; GELİŞİM PLANI</li>
             <li>45 DK / SEANS</li>
           </ul>
-          <div style="margin-top:22px"><a class="btn btn-gold" href="#iletisim" style="width:100%">RANDEVU AL</a></div>
+          <div style="margin-top:22px"><a class="btn btn-gold" href="#randevu" style="width:100%">RANDEVU AL</a></div>
         </div>
  
         <!-- 2'li Grup Dersleri -->
@@ -642,7 +642,7 @@
             <li>2 KİŞİ BİRLİKTE</li>
             <li>45 DK / SEANS</li>
           </ul>
-          <div style="margin-top:22px"><a class="btn btn-ghost" href="#iletisim" style="width:100%">RANDEVU AL</a></div>
+          <div style="margin-top:22px"><a class="btn btn-ghost" href="#randevu" style="width:100%">RANDEVU AL</a></div>
         </div>
  
         <!-- 3'lü Grup Dersleri -->
@@ -668,7 +668,7 @@
             <li>3 KİŞİ BİRLİKTE</li>
             <li>45 DK / SEANS</li>
           </ul>
-          <div style="margin-top:22px"><a class="btn btn-ghost" href="#iletisim" style="width:100%">RANDEVU AL</a></div>
+          <div style="margin-top:22px"><a class="btn btn-ghost" href="#randevu" style="width:100%">RANDEVU AL</a></div>
         </div>
       </div>
  
@@ -690,7 +690,7 @@
             <li>BEL &amp; BOYUN ODAKLI</li>
             <li>FİZYOTERAPİ YAKLAŞIMI</li>
           </ul>
-          <div style="margin-top:22px"><a class="btn btn-ghost" href="#iletisim" style="width:100%">RANDEVU AL</a></div>
+          <div style="margin-top:22px"><a class="btn btn-ghost" href="#randevu" style="width:100%">RANDEVU AL</a></div>
         </div>
  
         <!-- Evde Manuel Terapi -->
@@ -710,7 +710,7 @@
             <li>İSTANBUL İÇİ ULAŞIM DAHİL</li>
             <li>RANDEVU SAATİ SİZE ÖZEL</li>
           </ul>
-          <div style="margin-top:22px"><a class="btn btn-ghost" href="#iletisim" style="width:100%">RANDEVU AL</a></div>
+          <div style="margin-top:22px"><a class="btn btn-ghost" href="#randevu" style="width:100%">RANDEVU AL</a></div>
         </div>
       </div>
     </section>
@@ -732,7 +732,7 @@
                 <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
                 @my.fizyo
               </a>
-              <a class="link-pill" href="#iletisim">
+              <a class="link-pill" href="#randevu">
                 <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
                 Randevu Al
               </a>
@@ -808,6 +808,43 @@
  
   <div class="container">
     <section id="randevu">
+      <div class="section-title-group reveal">
+        <div class="section-label">Online Randevu</div>
+        <h2>Takvimden uygun<br>saati se&ccedil;in.</h2>
+        <p>Uygun g&uuml;n ve saati se&ccedil;in, randevunuz an&#305;nda onaylans&#305;n. Tercih ederseniz WhatsApp &uuml;zerinden de yazabilirsiniz.</p>
+      </div>
+      <div class="booking-grid reveal">
+        <div class="booking-card booking-calendar-card">
+          <div class="booking-panel-head">
+            <div>
+              <h3>Randevu Takvimi</h3>
+              <p id="bookingHeadNote">Reformer, Manuel Terapi ve Klinik Pilates seanslar&#305; i&ccedil;in uygun saatleri a&#351;a&#287;&#305;dan g&ouml;rebilirsiniz.</p>
+            </div>
+            <a class="btn btn-outline" id="bookingOpenNewTab" href="#" target="_blank" rel="noopener">Yeni sekmede a&ccedil;</a>
+          </div>
+          <div class="booking-embed" id="bookingEmbedWrap">
+            <iframe id="bookingIframe" title="MyFizyo Online Randevu Takvimi" src="" style="display:none;width:100%;height:600px;border:0" loading="lazy"></iframe>
+            <div id="bookingFallback" style="padding:28px">
+              <p style="color:var(--muted);font-size:13.5px;line-height:1.7;margin-bottom:16px">Online randevu takvimi &ccedil;ok yak&#305;nda burada aktif olacak. &#350;imdilik WhatsApp &uuml;zerinden yazarak randevu alabilirsiniz.</p>
+              <a class="btn btn-gold" id="bookingFallbackWa" href="#">&#128241; WhatsApp'tan Randevu Al</a>
+            </div>
+          </div>
+        </div>
+        <div class="booking-card">
+          <h3>Nas&#305;l &ccedil;al&#305;&#351;&#305;r?</h3>
+          <p>Randevu almadan &ouml;nce bilmeniz gerekenler.</p>
+          <ul class="info-list">
+            <li>Uygun g&uuml;n ve saati se&ccedil;in, bilgilerinizi girin.</li>
+            <li>Randevunuz onayland&#305;&#287;&#305;nda e-posta ile bildirim al&#305;rs&#305;n&#305;z.</li>
+            <li>Standart seans s&uuml;resi 45 dakikad&#305;r.</li>
+            <li>De&#287;i&#351;iklik veya iptal i&ccedil;in WhatsApp'tan yazabilirsiniz.</li>
+          </ul>
+          <p class="privacy-note">Randevu bilgileriniz yaln&#305;zca klinik i&ccedil;in kullan&#305;l&#305;r, &uuml;&ccedil;&uuml;nc&uuml; taraflarla payla&#351;&#305;lmaz.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="panel">
       <div class="section-title-group reveal">
         <div class="section-label">&Ouml;zel Panel</div>
         <h2>MYFizyo randevu y&ouml;netim paneli.</h2>
@@ -1014,6 +1051,18 @@
  
     /* SETTINGS */
     var WA = "905537141461", PHONE = "+905537141461", IG = "https://instagram.com/my.fizyo";
+
+    /* ==========================================================
+       GOOGLE TAKViM RANDEVU LiNKi
+       Google Takvim'de "Randevu Planlama" (Appointment Schedule)
+       olu\u015fturduktan sonra ald\u0131\u011f\u0131n\u0131z payla\u015f\u0131m linkini
+       (\u00f6r: https://calendar.app.google/xxxxxxxx) a\u015fa\u011f\u0131daki
+       t\u0131rnaklar\u0131n aras\u0131na yap\u0131\u015ft\u0131r\u0131n. Bo\u015f b\u0131rak\u0131rsan\u0131z site
+       otomatik olarak WhatsApp'a y\u00f6nlendirme g\u00f6sterir.
+       ========================================================== */
+    var GOOGLE_CALENDAR_EMBED_URL = "https://calendar.google.com/calendar/appointments/schedules/AcZssZ0Ix3ck_Tv64ViYn71arULcqRpIM_iytGjG4EGhVCIxhutPX3_PITsdVNdcIuyqpI6bZ-OdeZfB?gv=true";
+    var GOOGLE_CALENDAR_SHARE_URL = "https://calendar.app.google/pkcL7CT12UFxSpYc6";
+
     function waLink(t){ return "https://wa.me/"+WA+"?text="+encodeURIComponent(t); }
     var dwa = waLink("MyFizyo i\u00e7in randevu almak istiyorum.\n\u0130smim: ");
     document.getElementById("waBtn").href = dwa;
@@ -1021,6 +1070,31 @@
     document.getElementById("callBtn").href = "tel:"+PHONE;
     document.getElementById("igLink").href = IG;
     document.getElementById("year").textContent = new Date().getFullYear();
+
+    /* ONLINE BOOKING (Google Calendar) */
+    (function(){
+      var configured = GOOGLE_CALENDAR_EMBED_URL && GOOGLE_CALENDAR_EMBED_URL.indexOf("http") === 0;
+      var iframe = document.getElementById("bookingIframe");
+      var fallback = document.getElementById("bookingFallback");
+      var openNewTab = document.getElementById("bookingOpenNewTab");
+      var fallbackWa = document.getElementById("bookingFallbackWa");
+      var headNote = document.getElementById("bookingHeadNote");
+
+      fallbackWa.href = waLink("MyFizyo i\u00e7in online randevu almak istiyorum.\n\u0130smim: ");
+
+      if (configured) {
+        iframe.src = GOOGLE_CALENDAR_EMBED_URL;
+        iframe.style.display = "block";
+        fallback.style.display = "none";
+        openNewTab.href = GOOGLE_CALENDAR_SHARE_URL || GOOGLE_CALENDAR_EMBED_URL;
+        openNewTab.style.display = "inline-flex";
+      } else {
+        iframe.style.display = "none";
+        fallback.style.display = "block";
+        openNewTab.style.display = "none";
+        headNote.textContent = "Online takvim yak\u0131nda aktif olacak. \u015eimdilik WhatsApp \u00fczerinden yazarak randevu alabilirsiniz.";
+      }
+    })();
 
     /* PRIVATE OWNER BOOKING PANEL */
     (function(){
