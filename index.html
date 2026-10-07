@@ -60,14 +60,15 @@
         { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Mat Pilates" } },
         { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Klinik Pilates" } },
         { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Manuel Terapi" } },
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Evde Manuel Terapi" } }
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Evde Manuel Terapi" } },
+        { "@type": "Offer", "price": "2000", "priceCurrency": "TRY", "itemOffered": { "@type": "Service", "name": "Bukkal Masajı" } }
       ]
     }
   }
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
   <style>
     :root{--warm-white:#faf8f4;--ink:#1a1714;--muted:#8a7f74;--gold:#b8955a;--gold-light:#d4b07a;--gold-pale:rgba(184,149,90,.10);--gold-border:rgba(184,149,90,.28);--divider:rgba(26,23,20,.08);--card-bg:#fff;--radius-sm:6px;--radius:14px;--radius-lg:22px;--max:1160px;--serif:'Cormorant Garamond',Georgia,serif;--sans:'DM Sans',sans-serif}
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
@@ -245,7 +246,8 @@
     .price-tier{display:flex;justify-content:space-between;align-items:center;padding:13px 18px;border-radius:10px;background:var(--warm-white);border:1px solid var(--divider);transition:background .22s,border-color .22s,transform .22s}
     .price-tier:hover{background:var(--gold-pale);border-color:var(--gold-border);transform:translateX(4px)}
     .price-tier-label{font-family:var(--sans);font-size:10px;font-weight:600;letter-spacing:2.5px;text-transform:uppercase;color:var(--muted)}
-    .price-tier-amount{font-family:var(--serif);font-size:24px;font-weight:400;color:var(--ink);letter-spacing:-.3px}
+    .price-tier-amount{font-family:'Manrope',var(--sans);font-size:21px;font-weight:700;color:var(--ink);letter-spacing:-.2px;font-variant-numeric:lining-nums tabular-nums;white-space:nowrap}
+    .price-tier-note{display:block;font-size:10px;font-weight:500;letter-spacing:1.4px;color:var(--gold);margin-top:2px}
     /* Alt divider ve features */
     .price-divider{height:1px;background:var(--divider);margin:20px 0}
     .price-features{list-style:none;display:flex;flex-direction:column;gap:10px}
@@ -730,7 +732,7 @@
       </div>
  
       <!-- Klinik Pilates + Manuel Terapi -->
-      <div class="pricing-grid-2">
+      <div class="pricing-grid-3" style="margin-top:20px">
  
         <!-- Klinik Pilates -->
         <div class="price-card special reveal reveal-delay-1">
@@ -753,7 +755,7 @@
         <!-- Evde Manuel Terapi -->
         <div class="price-card special reveal reveal-delay-2">
           <div class="price-tag new-tag">&#127968; EVDE HİZMET</div>
-          <h3>EVDE MANUEL TERAPİ<span class="card-title-sub">Kapınıza Geliyoruz</span></h3>
+          <h3 style="padding-right:118px">EVDE MANUEL TERAPİ<span class="card-title-sub">Kapınıza Geliyoruz</span></h3>
           <div class="price-tiers" style="margin-top:9px">
             <div class="price-tier">
               <span class="price-tier-label">TEK SEANS</span>
@@ -768,6 +770,28 @@
             <li>RANDEVU SAATİ SİZE ÖZEL</li>
           </ul>
           <div style="margin-top:22px"><a class="btn btn-ghost" href="#randevu" style="width:100%">RANDEVU AL</a></div>
+        </div>
+
+        <!-- Bukkal Masajı -->
+        <div class="price-card special reveal reveal-delay-3">
+          <div class="price-tag new-tag">YENİ</div>
+          <h3>BUKKAL MASAJI<span class="card-title-sub">Yüz &amp; Çene Rahatlaması</span></h3>
+          <div class="price-tiers" style="margin-top:9px">
+            <div class="price-tier">
+              <span class="price-tier-label">30 DK</span>
+              <span class="price-tier-amount">&#8378;2.000</span>
+            </div>
+            <div class="price-tier">
+              <span class="price-tier-label">30 DK &middot; 10:00&ndash;13:00</span>
+              <span class="price-tier-amount">&#8378;1.500</span>
+            </div>
+          </div>
+          <div class="price-divider"></div>
+          <ul class="price-features">
+            <li>YARIM SAAT SEANS</li>
+            <li>10:00&ndash;13:00 ARASI AVANTAJLI FİYAT</li>
+          </ul>
+          <div style="margin-top:22px;display:flex;gap:8px;flex-wrap:wrap"><a class="btn btn-ghost" href="#randevu" style="flex:1;min-width:120px">RANDEVU AL</a><a class="btn btn-outline" href="hizmetler/kartal-bukkal-masaji.html" style="flex:1;min-width:120px">DETAYLI B&#304;LG&#304;</a></div>
         </div>
       </div>
     </section>
